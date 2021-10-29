@@ -6,7 +6,7 @@
   <link href="https://lmlaz.github.io/atom.xml" rel="self"/>
   
   <link href="https://lmlaz.github.io/"/>
-  <updated>2021-10-27T02:57:03.602Z</updated>
+  <updated>2021-10-29T01:28:10.607Z</updated>
   <id>https://lmlaz.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swift-guard</title>
+    <link href="https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html"/>
+    <id>https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html</id>
+    <published>2021-10-29T01:05:23.000Z</published>
+    <updated>2021-10-29T01:28:10.607Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这篇文章转自：&lt;a href=&quot;https://ericcerney.com/swift-guard-statement/&quot;&gt;https://ericcerney.com/swift-guard-statement/&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="Swift" scheme="https://lmlaz.github.io/categories/Swift/"/>
+    
+    <category term="Basic usage" scheme="https://lmlaz.github.io/categories/Swift/Basic-usage/"/>
+    
+    
+    <category term="Swift" scheme="https://lmlaz.github.io/tags/Swift/"/>
+    
+    <category term="keyword" scheme="https://lmlaz.github.io/tags/keyword/"/>
+    
+    <category term="reprint" scheme="https://lmlaz.github.io/tags/reprint/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
