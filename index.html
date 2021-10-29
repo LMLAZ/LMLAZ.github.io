@@ -64,6 +64,83 @@
     <h1 class="page-type-title"></h1>
     
     
+    <article id="post-swiftui-project-icon-and-launch-pic" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html">Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html" class="article-date">
+  <time datetime="2021-10-29T12:00:58.000Z" itemprop="datePublished">2021-10-29</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/Swift/">Swift</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+      <h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
+<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
+<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样</p>
+<img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/Swift/swiftui-project-icon-and-launch-pic/appicon.png" class title="将4个图标放入xcassets">
+
+<br>
+
+<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
+<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
+<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
+<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。</p>
+<img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" class title="Add New Constraints">
+<img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/Swift/swiftui-project-icon-and-launch-pic/constraints.png" class title="set all Constraints">
+
+<br>
+
+<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。 </p>
+<img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/Swift/swiftui-project-icon-and-launch-pic/align.png" class title="the final results">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lmlaz.github.io/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html" data-id="ckvcdtfyk0002sqqfbe2k9l4j" class="article-share-link">
+        Share
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SwiftUI/" rel="tag">SwiftUI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/" rel="tag">Xcode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+    
     <article id="post-swift-guard" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -73,7 +150,7 @@
       
 
 <h2 itemprop="name">
-  <a class="article-title" href="/zh-cn/Swift/Basic-usage/swift-guard.html">swift-guard</a>
+  <a class="article-title" href="/zh-cn/Swift/Basic-usage/swift-guard.html">Swift Guard Statement（Swift中的 guard 语句）</a>
 </h2>
 
 
@@ -102,8 +179,8 @@
         
       
       
-      <p>这篇文章转自：<a target="_blank" rel="noopener" href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
-<h1 id="Swift-Guard-Statement"><a href="#Swift-Guard-Statement" class="headerlink" title="Swift Guard Statement"></a>Swift Guard Statement</h1><h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><br>
+      <h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a target="_blank" rel="noopener" href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
+<br>
 
 <p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
 <p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
@@ -143,7 +220,7 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html" data-id="ckvbp3lii0000d4qfcy4k4xp6" class="article-share-link">
+      <a data-url="https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html" data-id="ckvcdtfyh0001sqqf42fqbagd" class="article-share-link">
         Share
       </a>
       
@@ -210,7 +287,7 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lmlaz.github.io/zh-cn/uncategorized/hello-world.html" data-id="ckv9lyjrk00000hqf07g6ehb2" class="article-share-link">
+      <a data-url="https://lmlaz.github.io/zh-cn/uncategorized/hello-world.html" data-id="ckvcdtfy80000sqqf9mkmexss" class="article-share-link">
         Share
       </a>
       

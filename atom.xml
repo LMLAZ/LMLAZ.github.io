@@ -6,7 +6,7 @@
   <link href="https://lmlaz.github.io/atom.xml" rel="self"/>
   
   <link href="https://lmlaz.github.io/"/>
-  <updated>2021-10-29T01:28:10.607Z</updated>
+  <updated>2021-10-29T12:57:45.644Z</updated>
   <id>https://lmlaz.github.io/</id>
   
   <author>
@@ -17,19 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>swift-guard</title>
+    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
+    <link href="https://lmlaz.github.io/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html"/>
+    <id>https://lmlaz.github.io/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</id>
+    <published>2021-10-29T12:00:58.000Z</published>
+    <updated>2021-10-29T12:57:45.644Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;posted-by-LeoZhao&quot;&gt;&lt;a href=&quot;#posted-by-LeoZhao&quot; class=&quot;headerlink&quot; title=&quot;posted by LeoZhao&quot;&gt;&lt;/a&gt;posted by LeoZhao&lt;/h3&gt;&lt;br&gt;
+
+&lt;p&gt;图标</summary>
+        
+      
+    
+    
+    
+    <category term="Swift" scheme="https://lmlaz.github.io/categories/Swift/"/>
+    
+    
+    <category term="SwiftUI" scheme="https://lmlaz.github.io/tags/SwiftUI/"/>
+    
+    <category term="Xcode" scheme="https://lmlaz.github.io/tags/Xcode/"/>
+    
+    <category term="iOS" scheme="https://lmlaz.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swift Guard Statement（Swift中的 guard 语句）</title>
     <link href="https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html"/>
     <id>https://lmlaz.github.io/zh-cn/Swift/Basic-usage/swift-guard.html</id>
     <published>2021-10-29T01:05:23.000Z</published>
-    <updated>2021-10-29T01:28:10.607Z</updated>
+    <updated>2021-10-29T12:57:55.161Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;这篇文章转自：&lt;a href=&quot;https://ericcerney.com/swift-guard-statement/&quot;&gt;https://ericcerney.com/swift-guard-statement/&lt;/a&gt;&lt;/p&gt;
-&lt;h1</summary>
+    <summary type="html">&lt;h3 id=&quot;posted-by-ecerney&quot;&gt;&lt;a href=&quot;#posted-by-ecerney&quot; class=&quot;headerlink&quot; title=&quot;posted by ecerney&quot;&gt;&lt;/a&gt;posted by ecerney&lt;/h3&gt;&lt;p&gt;这篇文章转自：&lt;a</summary>
         
       
     
