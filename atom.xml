@@ -6,7 +6,7 @@
   <link href="https://lmlaz.github.io/atom.xml" rel="self"/>
   
   <link href="https://lmlaz.github.io/"/>
-  <updated>2021-10-29T13:10:54.593Z</updated>
+  <updated>2021-10-30T13:57:40.243Z</updated>
   <id>https://lmlaz.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SwiftUI Property Wrappers</title>
+    <link href="https://lmlaz.github.io/zh-cn/Swift/swiftui-property-wrappers.html"/>
+    <id>https://lmlaz.github.io/zh-cn/Swift/swiftui-property-wrappers.html</id>
+    <published>2021-10-30T13:19:01.000Z</published>
+    <updated>2021-10-30T13:57:40.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;posted-by-Majid&quot;&gt;&lt;a href=&quot;#posted-by-Majid&quot; class=&quot;headerlink&quot; title=&quot;posted by Majid&quot;&gt;&lt;/a&gt;posted by Majid&lt;/h3&gt;&lt;p&gt;这篇文章转载自：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Swift" scheme="https://lmlaz.github.io/categories/Swift/"/>
+    
+    
+    <category term="SwiftUI" scheme="https://lmlaz.github.io/tags/SwiftUI/"/>
+    
+    <category term="Property Wrappers" scheme="https://lmlaz.github.io/tags/Property-Wrappers/"/>
+    
+  </entry>
   
   <entry>
     <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
