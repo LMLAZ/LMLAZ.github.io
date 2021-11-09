@@ -274,7 +274,54 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       </categories>
       <tags>
         <tag>SwiftUI</tag>
+        <tag>reprint</tag>
         <tag>Property Wrappers</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为多个GitHub账户配置SSH</title>
+    <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+
+<p>通常我们经常会遇到这样的情况，需要为公司和个人的 <code>GitHub</code> 账户配置 <code>SSH Key</code>。但是，仅仅将自己电脑上已经生成的 <code>SSH Public Key</code> 粘贴到不同的 <code>GitHub</code> 账户是不行的，因为我们在生成 <code>SSH Key</code> 的时候，输入了邮箱，而 <code>SSH</code> 便是根据这一邮箱生成的，所以，想要连接多个账户，却想使用一个 <code>Key</code> 是很难实现的。</p>
+<br>
+
+<h2 id="第一步：生成多个-SSH-Key"><a href="#第一步：生成多个-SSH-Key" class="headerlink" title="第一步：生成多个 SSH Key"></a>第一步：生成多个 SSH Key</h2><p>我们想，既然 <code>SSH Key</code> 是根据邮箱生成的，那么，我们用多个邮箱生成多个 <code>SSH Key</code> 不就好了嘛。于是，用 <code>ssh-keygen</code> 生成两对 <code>SSH Key</code>，并且将他们区别命名。</p>
+<p><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/ssh-key-directory.png" alt="就像我这样，两对SSHKey"></p>
+<h2 id="第二步：添加好-SSH-Key"><a href="#第二步：添加好-SSH-Key" class="headerlink" title="第二步：添加好 SSH Key"></a>第二步：添加好 SSH Key</h2><blockquote>
+<p><em>请在不同的 GitHub 账户上的 “Settings”&gt;”SSH and GPG Keys” 中配置好相对应的公钥( *.pub 文件里的 )，这里不再赘述</em>😅</p>
+</blockquote>
+<p>当你的 <code>SSH Key</code> 的文件名被命名为 <code>id_rsa</code> 时，系统会将其当作默认的 <code>SSH Key</code>，所以它是不用配置了的。<br><br></p>
+<p>要将非 <code>id_rsa</code> 命名的 <code>SSH Key</code> 配置好的话，应执行命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add &lt;YourKeyPath&gt;</span><br></pre></td></tr></table></figure>
+
+<p>完成后，我们试试。输入命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T github</span><br></pre></td></tr></table></figure>
+<p>如果出现 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，那么恭喜，现在你的 <code>SSH Key</code> 配置历程已经过去了一半！🥳<br><br></p>
+<p>等等。。一半？</p>
+<p>对啊，我们好好想想，前面，我们通过 <code>ssh-add</code> 配置了 Key，但是，这种配置并不是持久性的，也就是说，当你关机再回来的时候。🤯 你可能又要重新 <code>ssh-add</code> 一次了。</p>
+<p>所以，我们还要：</p>
+<h2 id="第三步：写-Config"><a href="#第三步：写-Config" class="headerlink" title="第三步：写 Config"></a>第三步：写 Config</h2><p>再你的 <code>.ssh</code> 文件夹下创建一个 <code>config</code> 文件</p>
+<blockquote>
+<p>请注意：<code>.ssh</code> 文件夹默认是隐藏的，Linux 和 Mac 用户可以 cd 到 <code>~/.ssh</code>目录，再 <code>touch config</code></p>
+</blockquote>
+<p>顾名思义，这个 <code>config</code> 文件是用来配置系统 SSH 连接的</p>
+<p>我们在 <code>config</code> 文件里面这样写：</p>
+<blockquote>
+<p><code>Host</code> 后面的名称可以按自己的要求写，仅作为标识符<br><code>IdentityFile</code> 一定要对应好</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host github-personal</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line">  IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host github-tomortec</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa_tomortec</span><br><span class="line">  IdentitiesOnly yes</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
+<p>🎉🎉🎉🎉🎉🎉🎉🎉🎉</p>
+]]></content>
+      <categories>
+        <category>Basic Operation</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
 </search>
