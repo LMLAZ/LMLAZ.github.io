@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>为多个GitHub账户配置SSH</title>
+    <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+
+<p>通常我们经常会遇到这样的情况，需要为公司和个人的 <code>GitHub</code> 账户配置 <code>SSH Key</code>。但是，仅仅将自己电脑上已经生成的 <code>SSH Public Key</code> 粘贴到不同的 <code>GitHub</code> 账户是不行的，因为我们在生成 <code>SSH Key</code> 的时候，输入了邮箱，而 <code>SSH</code> 便是根据这一邮箱生成的，所以，想要连接多个账户，却想使用一个 <code>Key</code> 是很难实现的。</p>
+<br>
+
+<h2 id="第一步：生成多个-SSH-Key"><a href="#第一步：生成多个-SSH-Key" class="headerlink" title="第一步：生成多个 SSH Key"></a>第一步：生成多个 SSH Key</h2><p>我们想，既然 <code>SSH Key</code> 是根据邮箱生成的，那么，我们用多个邮箱生成多个 <code>SSH Key</code> 不就好了嘛。于是，用 <code>ssh-keygen</code> 生成两对 <code>SSH Key</code>，并且将他们区别命名。</p>
+<p><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/ssh-key-directory.png" alt="就像我这样，两对SSHKey"></p>
+<h2 id="第二步：添加好-SSH-Key"><a href="#第二步：添加好-SSH-Key" class="headerlink" title="第二步：添加好 SSH Key"></a>第二步：添加好 SSH Key</h2><blockquote>
+<p><em>请在不同的 GitHub 账户上的 “Settings”&gt;”SSH and GPG Keys” 中配置好相对应的公钥( *.pub 文件里的 )，这里不再赘述</em>😅</p>
+</blockquote>
+<p>当你的 <code>SSH Key</code> 的文件名被命名为 <code>id_rsa</code> 时，系统会将其当作默认的 <code>SSH Key</code>，所以它是不用配置了的。<br><br></p>
+<p>要将非 <code>id_rsa</code> 命名的 <code>SSH Key</code> 配置好的话，应执行命令 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add &lt;YourKeyPath&gt;</span><br></pre></td></tr></table></figure>
+
+<p>完成后，我们试试。输入命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T github</span><br></pre></td></tr></table></figure>
+<p>如果出现 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，那么恭喜，现在你的 <code>SSH Key</code> 配置历程已经过去了一半！🥳<br><br></p>
+<p>等等。。一半？</p>
+<p>对啊，我们好好想想，前面，我们通过 <code>ssh-add</code> 配置了 Key，但是，这种配置并不是持久性的，也就是说，当你关机再回来的时候。🤯 你可能又要重新 <code>ssh-add</code> 一次了。</p>
+<p>所以，我们还要：</p>
+<h2 id="第三步：写-Config"><a href="#第三步：写-Config" class="headerlink" title="第三步：写 Config"></a>第三步：写 Config</h2><p>再你的 <code>.ssh</code> 文件夹下创建一个 <code>config</code> 文件</p>
+<blockquote>
+<p>请注意：<code>.ssh</code> 文件夹默认是隐藏的，Linux 和 Mac 用户可以 cd 到 <code>~/.ssh</code>目录，再 <code>touch config</code></p>
+</blockquote>
+<p>顾名思义，这个 <code>config</code> 文件是用来配置系统 SSH 连接的</p>
+<p>我们在 <code>config</code> 文件里面这样写：</p>
+<blockquote>
+<p><code>Host</code> 后面的名称可以按自己的要求写，仅作为标识符<br><code>IdentityFile</code> 一定要对应好</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host github-personal</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line">  IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host github-tomortec</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa_tomortec</span><br><span class="line">  IdentitiesOnly yes</span><br></pre></td></tr></table></figure>
+
+<p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
+<p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
+
+<p>记住！记住！记住！</p>
+]]></content>
+      <categories>
+        <category>Basic Operation</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/zh-cn/uncategorized/hello-world.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -17,6 +67,84 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Swift Guard Statement（Swift中的 guard 语句）</title>
+    <url>/zh-cn/Swift/Basic-usage/swift-guard.html</url>
+    <content><![CDATA[<h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
+<br>
+
+<p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
+<p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
+<p>Even after seeing some examples, I only saw it as a confusing way to accomplish what we already could with Optional Binding or with <code>if-else</code> statements alone.</p>
+<br>
+It wasn’t until I started discussing it over this Twitter conversation that I realized there are actually some interesting benefits of using such syntax.
+<br>
+<br>
+
+<h2 id="Diving-In"><a href="#Diving-In" class="headerlink" title="Diving In"></a>Diving In</h2><p>Let’s take a simple example comparing current techniques vs using the new guard statement:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooManualCheck</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">==</span> <span class="literal">nil</span> <span class="operator">||</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x<span class="operator">!</span>.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This is the most basic Objective-C style way to make sure a value exists and that it meets a condition. Now this works fine, but has a couple flaws:</p>
+<ol>
+<li>You’re checking for a condition that you don’t want, rather than checking for the value you do want. Code becomes confusing when you have a bunch of checks like this. What you’re hoping for here is that your condition actually doesn’t pass.</li>
+<li>You also need to force unwrap the optional value after the condition fails.<br></li>
+</ol>
+<p>Swift gave us a way to clean this up and fix some of these flaws through Optional Binding:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooBinding</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Do stuff with x</span></span><br><span class="line">        x.description</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This removes both of the flaws that the first function had, but adds a new one. Here you’re putting your desired code within all the conditions, rather than afterward. You might not immediately see a problem with this, but you could imagine how confusing it could become if it was nested with numerous conditions that all needed to be met before running your statements.</p>
+<p>The way to clean this up is to do each of your checks first, and exit if any aren’t met. This allows easy understanding of what conditions will make this function exit.</p>
+<p>I’ve heard this called the Bouncer Pattern, which makes a lot of sense. You want to get rid of the bad cases before they get in the door. It also allows you to think about one case at a time, rather than figuring out how all combinations need to work together.</p>
+<p>Here enters the <code>guard</code> statement:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooGuard</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Using <code>guard</code> solves all 3 of the issues mentioned above:</p>
+<ol>
+<li>Checking for the condition you do want, not the one you don’t. This again is similar to an <code>assert</code>. If the condition is not met, <code>guard‘s else</code> statement is run, which breaks out of the function.</li>
+<li>If the condition passes, the optional variable here is automatically unwrapped for you within the scope that the <code>guard</code> statement was called – in this case, the <code>fooGuard(_:)</code> function. This is an important, yet notably strange feature that really makes the <code>guard</code> statement useful.</li>
+<li>You are checking for bad cases early, making your function more readable and easier to maintain.<br></li>
+</ol>
+<p>The cool thing is that this same pattern holds true for non-optional values as well:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalGood</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalBad</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>I hope this simple example shows how you could start using <code>guard</code> immediately in your Swift code to make your function/methods more clear. It’s easy for us to immediately judge the value of a new feature until you give it a chance and see what it can or can’t do for you.</p>
+<p>Going from Objective-C to Swift is a huge change, not only to syntax, but how you have to look at architecting your code. You can only benefit from this awesome new language if you actively change your mindset while writing code by expanding your everyday patterns and style.</p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+        <category>Basic usage</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>keyword</tag>
+        <tag>reprint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
+    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
+<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
+<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
+<br>
+
+<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
+<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
+<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
+<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
+<br>
+
+<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>SwiftUI</tag>
+        <tag>Xcode</tag>
+        <tag>iOS</tag>
+      </tags>
   </entry>
   <entry>
     <title>商品拜物教各文献的解读</title>
@@ -154,84 +282,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
-    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
-<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
-<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
-<br>
-
-<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
-<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
-<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
-<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
-<br>
-
-<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-      </categories>
-      <tags>
-        <tag>SwiftUI</tag>
-        <tag>Xcode</tag>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Swift Guard Statement（Swift中的 guard 语句）</title>
-    <url>/zh-cn/Swift/Basic-usage/swift-guard.html</url>
-    <content><![CDATA[<h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
-<br>
-
-<p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
-<p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
-<p>Even after seeing some examples, I only saw it as a confusing way to accomplish what we already could with Optional Binding or with <code>if-else</code> statements alone.</p>
-<br>
-It wasn’t until I started discussing it over this Twitter conversation that I realized there are actually some interesting benefits of using such syntax.
-<br>
-<br>
-
-<h2 id="Diving-In"><a href="#Diving-In" class="headerlink" title="Diving In"></a>Diving In</h2><p>Let’s take a simple example comparing current techniques vs using the new guard statement:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooManualCheck</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">==</span> <span class="literal">nil</span> <span class="operator">||</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x<span class="operator">!</span>.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This is the most basic Objective-C style way to make sure a value exists and that it meets a condition. Now this works fine, but has a couple flaws:</p>
-<ol>
-<li>You’re checking for a condition that you don’t want, rather than checking for the value you do want. Code becomes confusing when you have a bunch of checks like this. What you’re hoping for here is that your condition actually doesn’t pass.</li>
-<li>You also need to force unwrap the optional value after the condition fails.<br></li>
-</ol>
-<p>Swift gave us a way to clean this up and fix some of these flaws through Optional Binding:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooBinding</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Do stuff with x</span></span><br><span class="line">        x.description</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This removes both of the flaws that the first function had, but adds a new one. Here you’re putting your desired code within all the conditions, rather than afterward. You might not immediately see a problem with this, but you could imagine how confusing it could become if it was nested with numerous conditions that all needed to be met before running your statements.</p>
-<p>The way to clean this up is to do each of your checks first, and exit if any aren’t met. This allows easy understanding of what conditions will make this function exit.</p>
-<p>I’ve heard this called the Bouncer Pattern, which makes a lot of sense. You want to get rid of the bad cases before they get in the door. It also allows you to think about one case at a time, rather than figuring out how all combinations need to work together.</p>
-<p>Here enters the <code>guard</code> statement:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooGuard</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Using <code>guard</code> solves all 3 of the issues mentioned above:</p>
-<ol>
-<li>Checking for the condition you do want, not the one you don’t. This again is similar to an <code>assert</code>. If the condition is not met, <code>guard‘s else</code> statement is run, which breaks out of the function.</li>
-<li>If the condition passes, the optional variable here is automatically unwrapped for you within the scope that the <code>guard</code> statement was called – in this case, the <code>fooGuard(_:)</code> function. This is an important, yet notably strange feature that really makes the <code>guard</code> statement useful.</li>
-<li>You are checking for bad cases early, making your function more readable and easier to maintain.<br></li>
-</ol>
-<p>The cool thing is that this same pattern holds true for non-optional values as well:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalGood</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalBad</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>I hope this simple example shows how you could start using <code>guard</code> immediately in your Swift code to make your function/methods more clear. It’s easy for us to immediately judge the value of a new feature until you give it a chance and see what it can or can’t do for you.</p>
-<p>Going from Objective-C to Swift is a huge change, not only to syntax, but how you have to look at architecting your code. You can only benefit from this awesome new language if you actively change your mindset while writing code by expanding your everyday patterns and style.</p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-        <category>Basic usage</category>
-      </categories>
-      <tags>
-        <tag>Swift</tag>
-        <tag>keyword</tag>
-        <tag>reprint</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SwiftUI Property Wrappers</title>
     <url>/zh-cn/Swift/swiftui-property-wrappers.html</url>
     <content><![CDATA[<h3 id="posted-by-Majid"><a href="#posted-by-Majid" class="headerlink" title="posted by Majid"></a>posted by Majid</h3><p>这篇文章转载自：<a href="https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/">https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/</a><br>中文翻译可以看这篇文章：<a href="https://www.cnblogs.com/xiaoniuzai/p/11417123.html">https://www.cnblogs.com/xiaoniuzai/p/11417123.html</a></p>
@@ -273,59 +323,9 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
         <category>Swift</category>
       </categories>
       <tags>
-        <tag>SwiftUI</tag>
         <tag>reprint</tag>
+        <tag>SwiftUI</tag>
         <tag>Property Wrappers</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为多个GitHub账户配置SSH</title>
-    <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-
-<p>通常我们经常会遇到这样的情况，需要为公司和个人的 <code>GitHub</code> 账户配置 <code>SSH Key</code>。但是，仅仅将自己电脑上已经生成的 <code>SSH Public Key</code> 粘贴到不同的 <code>GitHub</code> 账户是不行的，因为我们在生成 <code>SSH Key</code> 的时候，输入了邮箱，而 <code>SSH</code> 便是根据这一邮箱生成的，所以，想要连接多个账户，却想使用一个 <code>Key</code> 是很难实现的。</p>
-<br>
-
-<h2 id="第一步：生成多个-SSH-Key"><a href="#第一步：生成多个-SSH-Key" class="headerlink" title="第一步：生成多个 SSH Key"></a>第一步：生成多个 SSH Key</h2><p>我们想，既然 <code>SSH Key</code> 是根据邮箱生成的，那么，我们用多个邮箱生成多个 <code>SSH Key</code> 不就好了嘛。于是，用 <code>ssh-keygen</code> 生成两对 <code>SSH Key</code>，并且将他们区别命名。</p>
-<p><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/ssh-key-directory.png" alt="就像我这样，两对SSHKey"></p>
-<h2 id="第二步：添加好-SSH-Key"><a href="#第二步：添加好-SSH-Key" class="headerlink" title="第二步：添加好 SSH Key"></a>第二步：添加好 SSH Key</h2><blockquote>
-<p><em>请在不同的 GitHub 账户上的 “Settings”&gt;”SSH and GPG Keys” 中配置好相对应的公钥( *.pub 文件里的 )，这里不再赘述</em>😅</p>
-</blockquote>
-<p>当你的 <code>SSH Key</code> 的文件名被命名为 <code>id_rsa</code> 时，系统会将其当作默认的 <code>SSH Key</code>，所以它是不用配置了的。<br><br></p>
-<p>要将非 <code>id_rsa</code> 命名的 <code>SSH Key</code> 配置好的话，应执行命令 </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add &lt;YourKeyPath&gt;</span><br></pre></td></tr></table></figure>
-
-<p>完成后，我们试试。输入命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T github</span><br></pre></td></tr></table></figure>
-<p>如果出现 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，那么恭喜，现在你的 <code>SSH Key</code> 配置历程已经过去了一半！🥳<br><br></p>
-<p>等等。。一半？</p>
-<p>对啊，我们好好想想，前面，我们通过 <code>ssh-add</code> 配置了 Key，但是，这种配置并不是持久性的，也就是说，当你关机再回来的时候。🤯 你可能又要重新 <code>ssh-add</code> 一次了。</p>
-<p>所以，我们还要：</p>
-<h2 id="第三步：写-Config"><a href="#第三步：写-Config" class="headerlink" title="第三步：写 Config"></a>第三步：写 Config</h2><p>再你的 <code>.ssh</code> 文件夹下创建一个 <code>config</code> 文件</p>
-<blockquote>
-<p>请注意：<code>.ssh</code> 文件夹默认是隐藏的，Linux 和 Mac 用户可以 cd 到 <code>~/.ssh</code>目录，再 <code>touch config</code></p>
-</blockquote>
-<p>顾名思义，这个 <code>config</code> 文件是用来配置系统 SSH 连接的</p>
-<p>我们在 <code>config</code> 文件里面这样写：</p>
-<blockquote>
-<p><code>Host</code> 后面的名称可以按自己的要求写，仅作为标识符<br><code>IdentityFile</code> 一定要对应好</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host github-personal</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line">  IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host github-tomortec</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa_tomortec</span><br><span class="line">  IdentitiesOnly yes</span><br></pre></td></tr></table></figure>
-
-<p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
-<p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
-
-<p>记住！记住！记住！</p>
-]]></content>
-      <categories>
-        <category>Basic Operation</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>SSH</tag>
       </tags>
   </entry>
 </search>
