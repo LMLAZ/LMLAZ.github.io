@@ -6,7 +6,7 @@
   <link href="https://lmlaz.github.io/atom.xml" rel="self"/>
   
   <link href="https://lmlaz.github.io/"/>
-  <updated>2021-11-09T15:01:26.338Z</updated>
+  <updated>2021-11-17T08:53:43.509Z</updated>
   <id>https://lmlaz.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>公司法解读</title>
+    <link href="https://lmlaz.github.io/zh-cn/Enterprise/Laws/company-law.html"/>
+    <id>https://lmlaz.github.io/zh-cn/Enterprise/Laws/company-law.html</id>
+    <published>2021-11-17T08:49:37.000Z</published>
+    <updated>2021-11-17T08:53:43.509Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;posted-by-LeoZhao&quot;&gt;&lt;a href=&quot;#posted-by-LeoZhao&quot; class=&quot;headerlink&quot; title=&quot;posted by LeoZhao&quot;&gt;&lt;/a&gt;posted by</summary>
+        
+      
+    
+    
+    
+    <category term="Enterprise" scheme="https://lmlaz.github.io/categories/Enterprise/"/>
+    
+    <category term="Laws" scheme="https://lmlaz.github.io/categories/Enterprise/Laws/"/>
+    
+    
+    <category term="Company Law" scheme="https://lmlaz.github.io/tags/Company-Law/"/>
+    
+    <category term="Enterprise" scheme="https://lmlaz.github.io/tags/Enterprise/"/>
+    
+  </entry>
   
   <entry>
     <title>为多个GitHub账户配置SSH</title>
