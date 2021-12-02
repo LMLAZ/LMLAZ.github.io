@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leolovedairy.life/zh-cn/Insights/2/innovation-insights-2.html</loc>
+    
+    <lastmod>2021-12-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leolovedairy.life/zh-cn/Insights/1/innovation-insights-1.html</loc>
     
     <lastmod>2021-12-02</lastmod>
@@ -252,6 +259,13 @@
   
   <url>
     <loc>https://www.leolovedairy.life/categories/Insights/1/</loc>
+    <lastmod>2021-12-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.leolovedairy.life/categories/Insights/2/</loc>
     <lastmod>2021-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
