@@ -441,7 +441,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add &lt;YourKeyPath&gt;</span><br></pre></td></tr></table></figure>
 
 <p>完成后，我们试试。输入命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T github</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>如果出现 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，那么恭喜，现在你的 <code>SSH Key</code> 配置历程已经过去了一半！🥳<br><br></p>
 <p>等等。。一半？</p>
 <p>对啊，我们好好想想，前面，我们通过 <code>ssh-add</code> 配置了 Key，但是，这种配置并不是持久性的，也就是说，当你关机再回来的时候。🤯 你可能又要重新 <code>ssh-add</code> 一次了。</p>
@@ -459,7 +459,7 @@
 
 <p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
 <p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
 
 <p>记住！记住！记住！</p>
@@ -1008,6 +1008,12 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       
         <a href="https://beian.miit.gov.cn/" target="_blank">ICP 备案号：京ICP备2021035035-1</a>
       
+      <li>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802038007" target="_blank"><img src="http://www.beian.gov.cn/portal/download?token=00430daf-270e-4526-a46b-659fda0c9dc2">京公网安备 11010802038007号</a>
+      </li>
+      <!--div style="width:300px;margin:0 auto; padding:20px 0;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802038007" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802038007号</p></a>
+      </div-->
       <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
       <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
     </ul>

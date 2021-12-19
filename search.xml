@@ -99,7 +99,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-add &lt;YourKeyPath&gt;</span><br></pre></td></tr></table></figure>
 
 <p>完成后，我们试试。输入命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T github</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>如果出现 <code>You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，那么恭喜，现在你的 <code>SSH Key</code> 配置历程已经过去了一半！🥳<br><br></p>
 <p>等等。。一半？</p>
 <p>对啊，我们好好想想，前面，我们通过 <code>ssh-add</code> 配置了 Key，但是，这种配置并不是持久性的，也就是说，当你关机再回来的时候。🤯 你可能又要重新 <code>ssh-add</code> 一次了。</p>
@@ -117,7 +117,7 @@
 
 <p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
 <p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
 
 <p>记住！记住！记住！</p>
