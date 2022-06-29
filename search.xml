@@ -81,6 +81,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/zh-cn/uncategorized/hello-world.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>为多个GitHub账户配置SSH</title>
     <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
     <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
@@ -117,7 +135,7 @@
 
 <p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
 <p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
 
 <p>记住！记住！记住！</p>
@@ -131,22 +149,65 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/zh-cn/uncategorized/hello-world.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>灵感——创新需要有工匠精神</title>
+    <url>/zh-cn/Insights/0/innovation-insights-0.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="——听《柔性电子产业和技术》的感想"><a href="#——听《柔性电子产业和技术》的感想" class="headerlink" title="——听《柔性电子产业和技术》的感想"></a>——听《柔性电子产业和技术》的感想</h2><p>这是一个浮躁的时代，人们追求名与利的步伐在不知不觉中加快。在此心理的驱使下，计算机、金融等能有更大概率赚到“热钱”的行业涌入了大量形形色色的人，他们有的并不掌握知识，却希望能在一朝一夕开发新的次世代技术；他们有的借来大额资金，希望能豪赌一把，鲤跃龙门。</p>
+<p>我曾是这样的人，在自己没有实力的情况下，幻想能进入一些热门领域，通过极短的时间，便能创造一番事业。现在回想起来，紧跟潮流、风口固然没错，因为一件脱离时代的产品或技术是注定失败的。但利用当下的新事物、寻找新方向，并不意味着一味模仿别人的成功，不意味着将当下的新事物做“一加一小于二”的算法。</p>
+<p>创新，是不需要要在一挥一蹴间完成的，而是应秉持工匠精神。创新，需要沉住气，认真分析未来、总结过去；需要关注基础、掌握原理知识；需要不断打磨、优化进取。</p>
+<p>雷霆老师的课，让我明白，我原来那种梦想快速创新的想法是如何的不现实，创新是积淀出来的，不是做一两个实验、看一两本书就能实现的。同时，我的视野也豁然开朗，创新，并不意味着事事都得与计算机挂钩，一些基础领域、为人所不熟知的领域的创新或许会更加有力。</p>
 ]]></content>
+      <categories>
+        <category>Insights</category>
+        <category>0</category>
+      </categories>
+      <tags>
+        <tag>Innovation</tag>
+        <tag>Insights</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>灵感——发展事业首先要选对方向</title>
+    <url>/zh-cn/Insights/2/innovation-insights-2.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<h2 id="——听雷鸣老师讲座有感"><a href="#——听雷鸣老师讲座有感" class="headerlink" title="——听雷鸣老师讲座有感"></a>——听雷鸣老师讲座有感</h2><p>今天听了雷鸣老师带给我们的精彩讲座，我明白了选对方向的重要性。</p>
+<p>对于创业者来说，方向有两个方面。</p>
+<p>第一，选对创新领域 </p>
+<p>        雷鸣老师提出，选择比努力更重要，他在2000年即进入了互联网市场，而后进军人工智能领域，这些市场在后来以及可预⻅的未来的表现都是良好的，有前景的。“磨刀不误砍柴工”，我们创新创业者应该大胆构想新的市场，然后小心求证和分析该市场的前景，认真评估该市场的表现、当前的痛点、未来发展的奇点，选对创新领域再进入，这样，更有利于成⻓发展。“欲速不达”，匆匆进入一个领域，急着开工、赚钱，诚然，抢先进入市场有利于壮大在该领域中的势力，使得自己在面对后来进入市场的其他人时更具有优势。但是，无疑，这种做法是冒险的，当你匆匆进入市场时，你有认真考虑过可能的替代品产业侵占你的市场吗?考虑过有更大势力的寡头进入市场，替代你的地位或者兼并你吗?考虑过市场发展的前景和萎缩的可能性吗?等你进入一个领域，却发现其市场有限，不利于继续发展时，是放弃之前高昂的沉没成本，吸取教训，重新开始，还是固守自己的观点，不思变通，加大投入?无论是前者还是后者，都会投入大量资金和机会成本，却收效甚微，不及其他可能的领域有效率。所以，选好正确的创新领域是前提。</p>
+<p>        当然，我们也可以采取一个折中的措施，那就是加快效率分析市场，在有极大的把握确认其市场的规模、发展潜力、消费能力、竞争者情况等各个条件都良好时，不要拖泥带水、犹豫不定，这说起来简单，但是有许多创业者难以做到。</p>
+<p>第二，选对知识领域 </p>
+<p>        雷鸣老师在北大获得计算机本硕学位，随后进入斯坦福商学院获得MBA学位，这让我想到了最近看的《乔布斯传》里面说到的乔布斯的目标:“然后我看到了我的偶像一，宝丽来的创始人埃 德温•兰德(Edwin Land)说的一些话，是关于既擅⻓人文叉能驾驭科学的人的重要性的，于是我决定，我要成为这样的人。〞兼容自然科学和社会科学，我对此产生了极大的共鸣。对于创业者而言，自然科学是基础，是“原始积累”可能的来源，而对社会科学的理解之深浅和新旧则影响着事业 能走的远近。这一点在盖茨、乔布斯、⻢斯克等人的身上体现得淋漓尽致。</p>
+]]></content>
+      <categories>
+        <category>Insights</category>
+        <category>2</category>
+      </categories>
+      <tags>
+        <tag>Innovation</tag>
+        <tag>Insights</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>灵感——伟大事业应从现在开始</title>
+    <url>/zh-cn/Insights/1/innovation-insights-1.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<h2 id="——听陈善广老师讲座有感"><a href="#——听陈善广老师讲座有感" class="headerlink" title="——听陈善广老师讲座有感"></a>——听陈善广老师讲座有感</h2><p>古人云:“千里之行，始于足下。”可我感觉我总是做不到这一点。我有一个梦，有一个宏大 的理想，有描摹了千百遍的蓝图，但是，为什么，我总是败在了那第一步——“何时开始?”。</p>
+<p>陈善广老师的讲座带给我的东⻄，对我而言，不仅仅是载人航天工程的科普和对我国载人航天工程事业的展望，更是一种激励和指引。</p>
+<p>陈老师给我们讲述了他从平凡走向中国载人航天办公室副总设计师的经历，我不禁为他做出 的伟大事业而感到热血沸腾，期望着有朝一日我也能像他一样，为社会做出自己的贡献，就像陈老 师说的一样——“与社会同频，与祖国同心，与时代同行”。我开始意识到，伟大事业不是一蹴而就 的，需要从平凡开始，从一点一滴开始，从当下开始。于是，我想到，要创新创业的我们当立足实 际，从现在开始着手准备，要在日常学习中锻炼自己的创新能力，要在生活和社会中寻找灵感，要 勇于启动自己想了很久的项目，迈出第一步。</p>
+<p>陈老师引用了习总书记的一句话——“伟大的事业都始于梦想，伟大的事业都基于创新，伟 大的事业都成于实干”，听到这句话时，我深有感触，这不就是我们要创新创业的人应该具有的品质 和行动吗?我们都要有创新创业的梦想，怀着一分⻜向星辰大海的理想;我们都要有创新的意识， 不断自我革新，寻找新思路、新方法，开拓新领域;我们更要脚踏实地，立足于实践之中，“用汗水 浇灌收获，以实干笃定前行”。对我而言，更应该从现在开始，从今打牢伟大事业的地基。</p>
+<p>最后，我谨以陈老师送给我们的一句话结尾，“登上高处，不是为了被整个世界看到;而是 为了看到整个世界。”</p>
+]]></content>
+      <categories>
+        <category>Insights</category>
+        <category>1</category>
+      </categories>
+      <tags>
+        <tag>Innovation</tag>
+        <tag>Insights</tag>
+      </tags>
   </entry>
   <entry>
     <title>商品拜物教各文献的解读</title>
@@ -284,6 +345,39 @@
       </tags>
   </entry>
   <entry>
+    <title>“拾句” 来了😉</title>
+    <url>/zh-cn/App/ZhuJian/the-launch-of-ZhuJian.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<p>我发现我已经好久没有发过博客了😂，上一次发还是在之前发的  </p>
+<p>差不多半年前写的 <a href="https://github.com/Tomortec/HexoPostEditor">HexoPostEditor</a> （拿来写博客的）甚至都没用过🥲，正好，这次趁着“拾句”正式发布赶紧用一用，不然要被嘎子偷走了  </p>
+<p>好吧好吧，这篇其实主要是随便谈谈“拾句”开发时的一些经过的，就当是记录一下啦  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-0.jpeg" alt="开篇"></p>
+<p><strong>为什么要做“拾句”？</strong>  </p>
+<p>就像我在很多地方说的那样，就是有一天我“难得”看一看书，想到要写一些东西下来，但是因为是在床上，而且舍友们都已经睡了，我不太好拿笔记。 <del>万一被发现偷偷卷了怎么办（bushi）😆</del> 其实我没有小桌子确实不好记，而且又（濑）啊。正好那段时间 Eutropension 已经大致完成了，比较闲，所以想着要不自己做一个算了，反正也不算很难。  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-1.jpg" alt="灵感"></p>
+<p>最后一边划水 <del>（传统艺能）</del> 一边做，一个星期不到就大概全部做完了，自己想要的功能都有了，包括记录、扫描、大纲、小组件这些。可是啊，人总是一个得寸进尺的生物。我想着都做到这里了，要不顺手发布一下吧👍，不然888都浪费了，哼。  </p>
+<p>然后我发现卡住我的不是什么技术难题，而是 <em>设计</em> 🤣 （啊，是设计，那个我又爱又烦的东西）。我年纪轻轻就在取名字、选择图标和背景图片上花了32个小时， <del>你敢想吗</del> 。我总觉得我对这些东西有种执念，他们必须要有一些故事在里面，再不济也应该有呼应、有深意，而不是拍拍脑瓜子就闭眼上网找现成的东西。  </p>
+<p>先是取名字，其实仔细看的话会发现“拾句”的英文是 ZhuJian (竹简)，我一开始创建项目的时候想的就是这个名字，因为当时我就想着要融入一些国风元素。古人在竹简上记录嘛，而且竹简上记录的东西有限，也更加契合“记录句子”的初衷。不久之后我猛然醒悟，我走的可是简约风啊（ <del>就是懒得画，懒得弄花里胡哨的东西</del> ），文不对题了属于是，所以必须要改名。那，起啥？「句子记录器？」「呸，恶心🤢，听起来就像流氓软件一样，太没有B格了吧」「淘句（我写这篇时乱起的，我怎么可能那么没品位，bushi）？」「🤮」「我去汉典找找吧」「🧻👄，行」OKOK，结果，我上汉典找到的都B过头了🤣，不接地气，听起来就很拗口。“星辰俯手拾”。哦？“拾”这字就OK啊，难不成就叫“拾句”，拾取世间最美的句子，拾取长河漫漫星辰。hng hňg，这不就来了么。  </p>
+<p>接下来就是图标了。那肯定不能就“拾句”两个字 pia 在上面啊，又不是 Eutropension（勿cue）。「句」不正好可以用「。」表示吗，这样就很容易做出单字的主体突出的设计了。  于是，我做出了下面三种 Icon（有一说一，MasterGo 真的好用还良心），但是，选择困难症犯了啊，该选哪一种呢。</p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-icons-script.jpeg" alt="图标设计稿"></p>
+<p>而至于背景图片，我通常的做法是上 Pexels 或者 Pixabay 找一些好看的图片放上去，就比如 MyWebnets，可是，这样做似乎不太好，毕竟我走的是简约风啊，在后面放一个花里胡哨的背景不就像是一张手纸扔进了水沟里面吗，不行不行。「嗯，要不用纯色背景？」「诶，好像还可以，但是特色呢？」我突然想到可以用传统的中国画作啊，前段时间听关大洲老师的作品觉得自己的血脉得到了共鸣。作为炎黄子孙，我有义务将中华传统文化融入现代生活中，向世人展示中国文化的魅力！👍我在古代文人画中挑选，选出了《江山秋色图》《清明上河图》《渔村小雪图》《写生蛱蝶图》，分别对应记录句子时淡雅、入世、恬静、活泼的心境。我希望用户能为这些背景所吸引，更加深入地了解其背后的故事，了解博大精深的中华文化。（为了这些作品能够更好地符合 App 的风格，我还对其进行了一些加工，若有不当，请指正，必将感激不尽）  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-2.jpg" alt="剪影">  </p>
+<p>至此，“拾句”的初代版本已经完成，前前后后经过了一个星期不到。我兴致勃勃地跑去提交， <strong>啪</strong> ，审核团队反手给了我一个 <del>大逼斗</del> ，噢，原来是我忘在 5.5 上测试了 😇，最下面的那个记录栏已经超出了边界。但是一开始退回的时候我不到啊，哒哒哒嘀哒哒，他就给我扔个网址，我还以为是啥王者修炼秘籍，结果一看新手训练营🤪。我还以为是当前卡片位移强调有点反人类了，就马上找他们交 (dui) 谈 (xian) 。🐒，好家伙，他们发过来了一个截图，直接给我整无语了——小丑🤡竟是我自己～。Nice，改完就成功上架了。  </p>
+<p>故事，应该就要结束了。<br>如果我没有做 ASO 或者广告的话，“拾句”就只有我一个人用，我想要的功能已经完备，在我的设备上也十分流畅，我不需要再做任何更新了。  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-3.jpg" alt="杂谈"></p>
+<p>可是，这是我么。这不是 LeoZhao  </p>
+]]></content>
+      <categories>
+        <category>App</category>
+        <category>ZhuJian</category>
+      </categories>
+      <tags>
+        <tag>App</tag>
+        <tag>Impression</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Swift Guard Statement（Swift中的 guard 语句）</title>
     <url>/zh-cn/Swift/Basic-usage/swift-guard.html</url>
     <content><![CDATA[<h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
@@ -335,33 +429,6 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       </tags>
   </entry>
   <entry>
-    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
-    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
-<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
-<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
-<br>
-
-<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
-<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
-<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
-<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
-<br>
-
-<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-      </categories>
-      <tags>
-        <tag>SwiftUI</tag>
-        <tag>Xcode</tag>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SwiftUI Property Wrappers</title>
     <url>/zh-cn/Swift/swiftui-property-wrappers.html</url>
     <content><![CDATA[<h3 id="posted-by-Majid"><a href="#posted-by-Majid" class="headerlink" title="posted by Majid"></a>posted by Majid</h3><p>这篇文章转载自：<a href="https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/">https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/</a><br>中文翻译可以看这篇文章：<a href="https://www.cnblogs.com/xiaoniuzai/p/11417123.html">https://www.cnblogs.com/xiaoniuzai/p/11417123.html</a></p>
@@ -409,64 +476,30 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
       </tags>
   </entry>
   <entry>
-    <title>灵感——创新需要有工匠精神</title>
-    <url>/zh-cn/Insights/0/innovation-insights-0.html</url>
+    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
+    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
     <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
 
-<h2 id="——听《柔性电子产业和技术》的感想"><a href="#——听《柔性电子产业和技术》的感想" class="headerlink" title="——听《柔性电子产业和技术》的感想"></a>——听《柔性电子产业和技术》的感想</h2><p>这是一个浮躁的时代，人们追求名与利的步伐在不知不觉中加快。在此心理的驱使下，计算机、金融等能有更大概率赚到“热钱”的行业涌入了大量形形色色的人，他们有的并不掌握知识，却希望能在一朝一夕开发新的次世代技术；他们有的借来大额资金，希望能豪赌一把，鲤跃龙门。</p>
-<p>我曾是这样的人，在自己没有实力的情况下，幻想能进入一些热门领域，通过极短的时间，便能创造一番事业。现在回想起来，紧跟潮流、风口固然没错，因为一件脱离时代的产品或技术是注定失败的。但利用当下的新事物、寻找新方向，并不意味着一味模仿别人的成功，不意味着将当下的新事物做“一加一小于二”的算法。</p>
-<p>创新，是不需要要在一挥一蹴间完成的，而是应秉持工匠精神。创新，需要沉住气，认真分析未来、总结过去；需要关注基础、掌握原理知识；需要不断打磨、优化进取。</p>
-<p>雷霆老师的课，让我明白，我原来那种梦想快速创新的想法是如何的不现实，创新是积淀出来的，不是做一两个实验、看一两本书就能实现的。同时，我的视野也豁然开朗，创新，并不意味着事事都得与计算机挂钩，一些基础领域、为人所不熟知的领域的创新或许会更加有力。</p>
-]]></content>
-      <categories>
-        <category>Insights</category>
-        <category>0</category>
-      </categories>
-      <tags>
-        <tag>Innovation</tag>
-        <tag>Insights</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>灵感——伟大事业应从现在开始</title>
-    <url>/zh-cn/Insights/1/innovation-insights-1.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
+<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
+<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
+<br>
 
-<h2 id="——听陈善广老师讲座有感"><a href="#——听陈善广老师讲座有感" class="headerlink" title="——听陈善广老师讲座有感"></a>——听陈善广老师讲座有感</h2><p>古人云:“千里之行，始于足下。”可我感觉我总是做不到这一点。我有一个梦，有一个宏大 的理想，有描摹了千百遍的蓝图，但是，为什么，我总是败在了那第一步——“何时开始?”。</p>
-<p>陈善广老师的讲座带给我的东⻄，对我而言，不仅仅是载人航天工程的科普和对我国载人航天工程事业的展望，更是一种激励和指引。</p>
-<p>陈老师给我们讲述了他从平凡走向中国载人航天办公室副总设计师的经历，我不禁为他做出 的伟大事业而感到热血沸腾，期望着有朝一日我也能像他一样，为社会做出自己的贡献，就像陈老 师说的一样——“与社会同频，与祖国同心，与时代同行”。我开始意识到，伟大事业不是一蹴而就 的，需要从平凡开始，从一点一滴开始，从当下开始。于是，我想到，要创新创业的我们当立足实 际，从现在开始着手准备，要在日常学习中锻炼自己的创新能力，要在生活和社会中寻找灵感，要 勇于启动自己想了很久的项目，迈出第一步。</p>
-<p>陈老师引用了习总书记的一句话——“伟大的事业都始于梦想，伟大的事业都基于创新，伟 大的事业都成于实干”，听到这句话时，我深有感触，这不就是我们要创新创业的人应该具有的品质 和行动吗?我们都要有创新创业的梦想，怀着一分⻜向星辰大海的理想;我们都要有创新的意识， 不断自我革新，寻找新思路、新方法，开拓新领域;我们更要脚踏实地，立足于实践之中，“用汗水 浇灌收获，以实干笃定前行”。对我而言，更应该从现在开始，从今打牢伟大事业的地基。</p>
-<p>最后，我谨以陈老师送给我们的一句话结尾，“登上高处，不是为了被整个世界看到;而是 为了看到整个世界。”</p>
-]]></content>
-      <categories>
-        <category>Insights</category>
-        <category>1</category>
-      </categories>
-      <tags>
-        <tag>Innovation</tag>
-        <tag>Insights</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>灵感——发展事业首先要选对方向</title>
-    <url>/zh-cn/Insights/2/innovation-insights-2.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
+<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
+<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
+<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
+<br>
 
-<h2 id="——听雷鸣老师讲座有感"><a href="#——听雷鸣老师讲座有感" class="headerlink" title="——听雷鸣老师讲座有感"></a>——听雷鸣老师讲座有感</h2><p>今天听了雷鸣老师带给我们的精彩讲座，我明白了选对方向的重要性。</p>
-<p>对于创业者来说，方向有两个方面。</p>
-<p>第一，选对创新领域 </p>
-<p>        雷鸣老师提出，选择比努力更重要，他在2000年即进入了互联网市场，而后进军人工智能领域，这些市场在后来以及可预⻅的未来的表现都是良好的，有前景的。“磨刀不误砍柴工”，我们创新创业者应该大胆构想新的市场，然后小心求证和分析该市场的前景，认真评估该市场的表现、当前的痛点、未来发展的奇点，选对创新领域再进入，这样，更有利于成⻓发展。“欲速不达”，匆匆进入一个领域，急着开工、赚钱，诚然，抢先进入市场有利于壮大在该领域中的势力，使得自己在面对后来进入市场的其他人时更具有优势。但是，无疑，这种做法是冒险的，当你匆匆进入市场时，你有认真考虑过可能的替代品产业侵占你的市场吗?考虑过有更大势力的寡头进入市场，替代你的地位或者兼并你吗?考虑过市场发展的前景和萎缩的可能性吗?等你进入一个领域，却发现其市场有限，不利于继续发展时，是放弃之前高昂的沉没成本，吸取教训，重新开始，还是固守自己的观点，不思变通，加大投入?无论是前者还是后者，都会投入大量资金和机会成本，却收效甚微，不及其他可能的领域有效率。所以，选好正确的创新领域是前提。</p>
-<p>        当然，我们也可以采取一个折中的措施，那就是加快效率分析市场，在有极大的把握确认其市场的规模、发展潜力、消费能力、竞争者情况等各个条件都良好时，不要拖泥带水、犹豫不定，这说起来简单，但是有许多创业者难以做到。</p>
-<p>第二，选对知识领域 </p>
-<p>        雷鸣老师在北大获得计算机本硕学位，随后进入斯坦福商学院获得MBA学位，这让我想到了最近看的《乔布斯传》里面说到的乔布斯的目标:“然后我看到了我的偶像一，宝丽来的创始人埃 德温•兰德(Edwin Land)说的一些话，是关于既擅⻓人文叉能驾驭科学的人的重要性的，于是我决定，我要成为这样的人。〞兼容自然科学和社会科学，我对此产生了极大的共鸣。对于创业者而言，自然科学是基础，是“原始积累”可能的来源，而对社会科学的理解之深浅和新旧则影响着事业 能走的远近。这一点在盖茨、乔布斯、⻢斯克等人的身上体现得淋漓尽致。</p>
+<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
 ]]></content>
       <categories>
-        <category>Insights</category>
-        <category>2</category>
+        <category>Swift</category>
       </categories>
       <tags>
-        <tag>Innovation</tag>
-        <tag>Insights</tag>
+        <tag>SwiftUI</tag>
+        <tag>Xcode</tag>
+        <tag>iOS</tag>
       </tags>
   </entry>
 </search>
