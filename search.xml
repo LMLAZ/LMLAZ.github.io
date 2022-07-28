@@ -81,24 +81,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/zh-cn/uncategorized/hello-world.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>为多个GitHub账户配置SSH</title>
     <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
     <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
@@ -135,7 +117,7 @@
 
 <p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
 <p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
 
 <p>记住！记住！记住！</p>
@@ -147,6 +129,24 @@
         <tag>GitHub</tag>
         <tag>SSH</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/zh-cn/uncategorized/hello-world.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>灵感——创新需要有工匠精神</title>
