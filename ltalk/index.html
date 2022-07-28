@@ -179,12 +179,19 @@
         margin: 0 0.5rem;
         width: 4rem;
         height: 4rem;
-        background-size: contain;
+        border: 2px solid #3d3d3d;
+        border-radius: 50%;
+        padding: 8px;
+        background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
     }
+    #artitalk_main .power > div:hover {
+        filter: invert(1);
+        background-color: #3d3d3d;
+    }
     #artitalk_main .power > div > svg {
-        display: none !important;
+        display: none;
         opacity: 0.0;
     }
     #pubComment, #pubShuo {
