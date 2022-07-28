@@ -69,7 +69,7 @@
         font-size: large;
         font-weight: 400;
         color: #3d3d3d;
-        background: white;
+        background: white !important;
         box-shadow: 0 1px 12px rgb(0 0 0 / 30%);
         border-radius: 12px;
     }
@@ -80,10 +80,14 @@
     p.shuoshuo_time span:nth-child(1) {
         font-size: medium;
     }
+    p.shuoshuo_time span:nth-child(3) > span > span {
+        vertical-align: inherit;
+        color: #3d3d3d;
+    }
     #artitalk_main span.cbp_tmlabel>p {
         margin-bottom: 5px;
     }
-    #artitalk_main span.cbp_tmlabel>p:nth-child(2) {
+    #artitalk_main span.cbp_tmlabel>p:nth-child(3) {
         display: none;
     }
     #artitalk_main .delete_right {
@@ -104,7 +108,7 @@
         fill: #3d3d3d;
     }
     #artitalk_main .shuoshuo_text {
-        background-image: url(https://leolovedairy.life/images/kanwo.png);
+        background-image: url(https://leolovedairy.life/images/kanwo.png) !important;
         background-repeat: no-repeat;
         background-size: contain;
         color: #3d3d3d;
