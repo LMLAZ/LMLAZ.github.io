@@ -62,7 +62,115 @@
       <!-- 引用 artitalk -->
 <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
 <style>
-    
+    #artitalk_main {
+        margin-top: 5vh;
+    }
+    #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel {
+        font-size: large;
+        font-weight: 400;
+        color: #3d3d3d;
+        background: white;
+        box-shadow: 0 1px 12px rgb(0 0 0 / 30%);
+        border-radius: 12px;
+    }
+    #artitalk_main p.shuoshuo_time {
+        font-size: small;
+        border-top: 1px dashed;
+    }
+    p.shuoshuo_time span:nth-child(1) {
+        font-size: medium;
+    }
+    #artitalk_main span.cbp_tmlabel>p {
+        margin-bottom: 5px;
+    }
+    #artitalk_main span.cbp_tmlabel>p:nth-child(2) {
+        display: none;
+    }
+    #artitalk_main .delete_right {
+        right: 2rem;
+    }
+    #artitalk_main .shuoshuo_author_img img {
+        border: none;
+        box-shadow: 0 0 6px rgb(0 0 0 / 30%);
+    }
+    #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel:after {
+        display: none;
+    }
+    #artitalk_main svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    #artitalk_main svg > path {
+        fill: #3d3d3d;
+    }
+    #artitalk_main .shuoshuo_text {
+        background-image: url(https://leolovedairy.life/images/kanwo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: #3d3d3d;
+        box-shadow: 0 0 12px rgb(0 0 0 / 30%);
+        border: none;
+        font-size: large;
+        border-radius: 12px;
+    }
+    #artitalk_main .shuoshuo_inputs {
+        color: #3d3d3d;
+        box-shadow: 0 0 12px rgb(0 0 0 / 30%);
+        border: none;
+        font-size: medium;
+        border-radius: 8px;
+    }
+    #operare_artitalk .at_button, #artitalk_main .at_button {
+        background-color: white;
+        border: none;
+        color: #3d3d3d;
+        font-size: medium;
+        font-weight: 500;
+        border-radius: 8px;
+        outline: none;
+        box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+    }
+    #operare_artitalk .at_button:hover, #artitalk_main .at_button:hover {
+        background-color: white;
+    }
+    #artitalk_main .shuoshuo_emoji {
+        border: none;
+        padding: 1rem;
+        border-radius: 12px 12px 0 0;
+        box-shadow: 0px -2px 4px rgb(0 0 0 / 30%);
+        margin-top: 2rem;
+    }
+    #artitalk_main div#shuoshuo_emojiswitch {
+        border: none;
+        box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+        border-radius: 0 0 12px 12px;
+    }
+    #artitalk_main .shuoshuo_emoji_part {
+        font-size: medium;
+        border-radius: inherit;
+    }
+    #artitalk_main .shuoshuo_emoji_part:hover {
+        background-color: #3d3d3daa;
+    }
+    #artitalk_main .zuiliangdezai {
+        background-color: #3d3d3d;
+    }
+    #artitalk_main .shuoshuo_row {
+        margin-top: 2rem;
+    }
+    #artitalk_main #preview {
+        font-size: large;
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 16px rgb(0 0 0 / 30%);
+    }
+    #artitalk_main .power a {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #3d3d3d;
+        margin-left: 0.5rem;
+    }
 </style>
 <!-- 存放说说的容器 -->
 <div id="artitalk_main"></div>
@@ -88,7 +196,7 @@ new Artitalk({
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://leolovedairy.life/ltalk/index.html" data-id="cl64xocjy0006mcqf07kpezuz" class="article-share-link">
+      <a data-url="https://leolovedairy.life/ltalk/index.html" data-id="cl651vhkl0000zmqf1xiye2w7" class="article-share-link">
         Share
       </a>
       

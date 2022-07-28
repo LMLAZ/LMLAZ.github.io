@@ -99,25 +99,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>灵感——创新需要有工匠精神</title>
-    <url>/zh-cn/Insights/0/innovation-insights-0.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-<h2 id="——听《柔性电子产业和技术》的感想"><a href="#——听《柔性电子产业和技术》的感想" class="headerlink" title="——听《柔性电子产业和技术》的感想"></a>——听《柔性电子产业和技术》的感想</h2><p>这是一个浮躁的时代，人们追求名与利的步伐在不知不觉中加快。在此心理的驱使下，计算机、金融等能有更大概率赚到“热钱”的行业涌入了大量形形色色的人，他们有的并不掌握知识，却希望能在一朝一夕开发新的次世代技术；他们有的借来大额资金，希望能豪赌一把，鲤跃龙门。</p>
-<p>我曾是这样的人，在自己没有实力的情况下，幻想能进入一些热门领域，通过极短的时间，便能创造一番事业。现在回想起来，紧跟潮流、风口固然没错，因为一件脱离时代的产品或技术是注定失败的。但利用当下的新事物、寻找新方向，并不意味着一味模仿别人的成功，不意味着将当下的新事物做“一加一小于二”的算法。</p>
-<p>创新，是不需要要在一挥一蹴间完成的，而是应秉持工匠精神。创新，需要沉住气，认真分析未来、总结过去；需要关注基础、掌握原理知识；需要不断打磨、优化进取。</p>
-<p>雷霆老师的课，让我明白，我原来那种梦想快速创新的想法是如何的不现实，创新是积淀出来的，不是做一两个实验、看一两本书就能实现的。同时，我的视野也豁然开朗，创新，并不意味着事事都得与计算机挂钩，一些基础领域、为人所不熟知的领域的创新或许会更加有力。</p>
-]]></content>
-      <categories>
-        <category>Insights</category>
-        <category>0</category>
-      </categories>
-      <tags>
-        <tag>Innovation</tag>
-        <tag>Insights</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为多个GitHub账户配置SSH</title>
     <url>/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh.html</url>
     <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
@@ -154,7 +135,7 @@
 
 <p>这样，我们就真正配置好多个 <code>SSH Key</code> 了。🥳🥳🥳<br><br>测试一下吧，<br><code>ssh -T &lt;YourHostName&gt;</code><br><img src="/zh-cn/Basic-Operation/connect-mutiple-github-accounts-with-ssh/success.png" alt="OK！大功告成"></p>
 <p>🎉🎉🎉🎉🎉🎉🎉🎉🎉？</p>
-<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
+<h2 id="等等，这提醒很重要"><a href="#等等，这提醒很重要" class="headerlink" title="等等，这提醒很重要"></a>等等，这提醒很重要</h2><p>在配置了 <code>config</code> 文件后，对 <code>SSH</code> 链接的操作<strong>不再</strong>是<br>“<a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:YourName/YourRepo.git”（默认的） 了<br>而是应该变为 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git@&lt;YourHostName&gt;:YourName/YourRepo.git</span><br></pre></td></tr></table></figure>
 
 <p>记住！记住！记住！</p>
@@ -188,6 +169,52 @@
       </tags>
   </entry>
   <entry>
+    <title>灵感——创新需要有工匠精神</title>
+    <url>/zh-cn/Insights/0/innovation-insights-0.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<h2 id="——听《柔性电子产业和技术》的感想"><a href="#——听《柔性电子产业和技术》的感想" class="headerlink" title="——听《柔性电子产业和技术》的感想"></a>——听《柔性电子产业和技术》的感想</h2><p>这是一个浮躁的时代，人们追求名与利的步伐在不知不觉中加快。在此心理的驱使下，计算机、金融等能有更大概率赚到“热钱”的行业涌入了大量形形色色的人，他们有的并不掌握知识，却希望能在一朝一夕开发新的次世代技术；他们有的借来大额资金，希望能豪赌一把，鲤跃龙门。</p>
+<p>我曾是这样的人，在自己没有实力的情况下，幻想能进入一些热门领域，通过极短的时间，便能创造一番事业。现在回想起来，紧跟潮流、风口固然没错，因为一件脱离时代的产品或技术是注定失败的。但利用当下的新事物、寻找新方向，并不意味着一味模仿别人的成功，不意味着将当下的新事物做“一加一小于二”的算法。</p>
+<p>创新，是不需要要在一挥一蹴间完成的，而是应秉持工匠精神。创新，需要沉住气，认真分析未来、总结过去；需要关注基础、掌握原理知识；需要不断打磨、优化进取。</p>
+<p>雷霆老师的课，让我明白，我原来那种梦想快速创新的想法是如何的不现实，创新是积淀出来的，不是做一两个实验、看一两本书就能实现的。同时，我的视野也豁然开朗，创新，并不意味着事事都得与计算机挂钩，一些基础领域、为人所不熟知的领域的创新或许会更加有力。</p>
+]]></content>
+      <categories>
+        <category>Insights</category>
+        <category>0</category>
+      </categories>
+      <tags>
+        <tag>Innovation</tag>
+        <tag>Insights</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
+    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
+<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
+<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
+<br>
+
+<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
+<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
+<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
+<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
+<br>
+
+<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>SwiftUI</tag>
+        <tag>Xcode</tag>
+        <tag>iOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>灵感——发展事业首先要选对方向</title>
     <url>/zh-cn/Insights/2/innovation-insights-2.html</url>
     <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
@@ -207,6 +234,90 @@
       <tags>
         <tag>Innovation</tag>
         <tag>Insights</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Swift Guard Statement（Swift中的 guard 语句）</title>
+    <url>/zh-cn/Swift/Basic-usage/swift-guard.html</url>
+    <content><![CDATA[<h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
+<br>
+
+<p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
+<p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
+<p>Even after seeing some examples, I only saw it as a confusing way to accomplish what we already could with Optional Binding or with <code>if-else</code> statements alone.</p>
+<br>
+It wasn’t until I started discussing it over this Twitter conversation that I realized there are actually some interesting benefits of using such syntax.
+<br>
+<br>
+
+<h2 id="Diving-In"><a href="#Diving-In" class="headerlink" title="Diving In"></a>Diving In</h2><p>Let’s take a simple example comparing current techniques vs using the new guard statement:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooManualCheck</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">==</span> <span class="literal">nil</span> <span class="operator">||</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x<span class="operator">!</span>.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This is the most basic Objective-C style way to make sure a value exists and that it meets a condition. Now this works fine, but has a couple flaws:</p>
+<ol>
+<li>You’re checking for a condition that you don’t want, rather than checking for the value you do want. Code becomes confusing when you have a bunch of checks like this. What you’re hoping for here is that your condition actually doesn’t pass.</li>
+<li>You also need to force unwrap the optional value after the condition fails.<br></li>
+</ol>
+<p>Swift gave us a way to clean this up and fix some of these flaws through Optional Binding:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooBinding</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Do stuff with x</span></span><br><span class="line">        x.description</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This removes both of the flaws that the first function had, but adds a new one. Here you’re putting your desired code within all the conditions, rather than afterward. You might not immediately see a problem with this, but you could imagine how confusing it could become if it was nested with numerous conditions that all needed to be met before running your statements.</p>
+<p>The way to clean this up is to do each of your checks first, and exit if any aren’t met. This allows easy understanding of what conditions will make this function exit.</p>
+<p>I’ve heard this called the Bouncer Pattern, which makes a lot of sense. You want to get rid of the bad cases before they get in the door. It also allows you to think about one case at a time, rather than figuring out how all combinations need to work together.</p>
+<p>Here enters the <code>guard</code> statement:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooGuard</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Using <code>guard</code> solves all 3 of the issues mentioned above:</p>
+<ol>
+<li>Checking for the condition you do want, not the one you don’t. This again is similar to an <code>assert</code>. If the condition is not met, <code>guard‘s else</code> statement is run, which breaks out of the function.</li>
+<li>If the condition passes, the optional variable here is automatically unwrapped for you within the scope that the <code>guard</code> statement was called – in this case, the <code>fooGuard(_:)</code> function. This is an important, yet notably strange feature that really makes the <code>guard</code> statement useful.</li>
+<li>You are checking for bad cases early, making your function more readable and easier to maintain.<br></li>
+</ol>
+<p>The cool thing is that this same pattern holds true for non-optional values as well:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalGood</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalBad</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br>
+
+<h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>I hope this simple example shows how you could start using <code>guard</code> immediately in your Swift code to make your function/methods more clear. It’s easy for us to immediately judge the value of a new feature until you give it a chance and see what it can or can’t do for you.</p>
+<p>Going from Objective-C to Swift is a huge change, not only to syntax, but how you have to look at architecting your code. You can only benefit from this awesome new language if you actively change your mindset while writing code by expanding your everyday patterns and style.</p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+        <category>Basic usage</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+        <tag>keyword</tag>
+        <tag>reprint</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“拾句” 来了😉</title>
+    <url>/zh-cn/App/ZhuJian/the-launch-of-ZhuJian.html</url>
+    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
+
+<p>我发现我已经好久没有发过博客了😂，上一次发还是在之前发的  </p>
+<p>差不多半年前写的 <a href="https://github.com/Tomortec/HexoPostEditor">HexoPostEditor</a> （拿来写博客的）甚至都没用过🥲，正好，这次趁着“拾句”正式发布赶紧用一用，不然要被嘎子偷走了  </p>
+<p>好吧好吧，这篇其实主要是随便谈谈“拾句”开发时的一些经过的，就当是记录一下啦  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-0.jpeg" alt="开篇"></p>
+<p><strong>为什么要做“拾句”？</strong>  </p>
+<p>就像我在很多地方说的那样，就是有一天我“难得”看一看书，想到要写一些东西下来，但是因为是在床上，而且舍友们都已经睡了，我不太好拿笔记。 <del>万一被发现偷偷卷了怎么办（bushi）😆</del> 其实我没有小桌子确实不好记，而且又（濑）啊。正好那段时间 Eutropension 已经大致完成了，比较闲，所以想着要不自己做一个算了，反正也不算很难。  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-1.jpg" alt="灵感"></p>
+<p>最后一边划水 <del>（传统艺能）</del> 一边做，一个星期不到就大概全部做完了，自己想要的功能都有了，包括记录、扫描、大纲、小组件这些。可是啊，人总是一个得寸进尺的生物。我想着都做到这里了，要不顺手发布一下吧👍，不然888都浪费了，哼。  </p>
+<p>然后我发现卡住我的不是什么技术难题，而是 <em>设计</em> 🤣 （啊，是设计，那个我又爱又烦的东西）。我年纪轻轻就在取名字、选择图标和背景图片上花了32个小时， <del>你敢想吗</del> 。我总觉得我对这些东西有种执念，他们必须要有一些故事在里面，再不济也应该有呼应、有深意，而不是拍拍脑瓜子就闭眼上网找现成的东西。  </p>
+<p>先是取名字，其实仔细看的话会发现“拾句”的英文是 ZhuJian (竹简)，我一开始创建项目的时候想的就是这个名字，因为当时我就想着要融入一些国风元素。古人在竹简上记录嘛，而且竹简上记录的东西有限，也更加契合“记录句子”的初衷。不久之后我猛然醒悟，我走的可是简约风啊（ <del>就是懒得画，懒得弄花里胡哨的东西</del> ），文不对题了属于是，所以必须要改名。那，起啥？「句子记录器？」「呸，恶心🤢，听起来就像流氓软件一样，太没有B格了吧」「淘句（我写这篇时乱起的，我怎么可能那么没品位，bushi）？」「🤮」「我去汉典找找吧」「🧻👄，行」OKOK，结果，我上汉典找到的都B过头了🤣，不接地气，听起来就很拗口。“星辰俯手拾”。哦？“拾”这字就OK啊，难不成就叫“拾句”，拾取世间最美的句子，拾取长河漫漫星辰。hng hňg，这不就来了么。  </p>
+<p>接下来就是图标了。那肯定不能就“拾句”两个字 pia 在上面啊，又不是 Eutropension（勿cue）。「句」不正好可以用「。」表示吗，这样就很容易做出单字的主体突出的设计了。  于是，我做出了下面三种 Icon（有一说一，MasterGo 真的好用还良心），但是，选择困难症犯了啊，该选哪一种呢。</p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-icons-script.jpeg" alt="图标设计稿"></p>
+<p>而至于背景图片，我通常的做法是上 Pexels 或者 Pixabay 找一些好看的图片放上去，就比如 MyWebnets，可是，这样做似乎不太好，毕竟我走的是简约风啊，在后面放一个花里胡哨的背景不就像是一张手纸扔进了水沟里面吗，不行不行。「嗯，要不用纯色背景？」「诶，好像还可以，但是特色呢？」我突然想到可以用传统的中国画作啊，前段时间听关大洲老师的作品觉得自己的血脉得到了共鸣。作为炎黄子孙，我有义务将中华传统文化融入现代生活中，向世人展示中国文化的魅力！👍我在古代文人画中挑选，选出了《江山秋色图》《清明上河图》《渔村小雪图》《写生蛱蝶图》，分别对应记录句子时淡雅、入世、恬静、活泼的心境。我希望用户能为这些背景所吸引，更加深入地了解其背后的故事，了解博大精深的中华文化。（为了这些作品能够更好地符合 App 的风格，我还对其进行了一些加工，若有不当，请指正，必将感激不尽）  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-2.jpg" alt="剪影">  </p>
+<p>至此，“拾句”的初代版本已经完成，前前后后经过了一个星期不到。我兴致勃勃地跑去提交， <strong>啪</strong> ，审核团队反手给了我一个 <del>大逼斗</del> ，噢，原来是我忘在 5.5 上测试了 😇，最下面的那个记录栏已经超出了边界。但是一开始退回的时候我不到啊，哒哒哒嘀哒哒，他就给我扔个网址，我还以为是啥王者修炼秘籍，结果一看新手训练营🤪。我还以为是当前卡片位移强调有点反人类了，就马上找他们交 (dui) 谈 (xian) 。🐒，好家伙，他们发过来了一个截图，直接给我整无语了——小丑🤡竟是我自己～。Nice，改完就成功上架了。  </p>
+<p>故事，应该就要结束了。<br>如果我没有做 ASO 或者广告的话，“拾句”就只有我一个人用，我想要的功能已经完备，在我的设备上也十分流畅，我不需要再做任何更新了。  </p>
+<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-3.jpg" alt="杂谈"></p>
+<p>可是，这是我么。这不是 LeoZhao  </p>
+]]></content>
+      <categories>
+        <category>App</category>
+        <category>ZhuJian</category>
+      </categories>
+      <tags>
+        <tag>App</tag>
+        <tag>Impression</tag>
       </tags>
   </entry>
   <entry>
@@ -345,57 +456,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Swift Guard Statement（Swift中的 guard 语句）</title>
-    <url>/zh-cn/Swift/Basic-usage/swift-guard.html</url>
-    <content><![CDATA[<h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
-<br>
-
-<p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
-<p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
-<p>Even after seeing some examples, I only saw it as a confusing way to accomplish what we already could with Optional Binding or with <code>if-else</code> statements alone.</p>
-<br>
-It wasn’t until I started discussing it over this Twitter conversation that I realized there are actually some interesting benefits of using such syntax.
-<br>
-<br>
-
-<h2 id="Diving-In"><a href="#Diving-In" class="headerlink" title="Diving In"></a>Diving In</h2><p>Let’s take a simple example comparing current techniques vs using the new guard statement:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooManualCheck</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">==</span> <span class="literal">nil</span> <span class="operator">||</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x<span class="operator">!</span>.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This is the most basic Objective-C style way to make sure a value exists and that it meets a condition. Now this works fine, but has a couple flaws:</p>
-<ol>
-<li>You’re checking for a condition that you don’t want, rather than checking for the value you do want. Code becomes confusing when you have a bunch of checks like this. What you’re hoping for here is that your condition actually doesn’t pass.</li>
-<li>You also need to force unwrap the optional value after the condition fails.<br></li>
-</ol>
-<p>Swift gave us a way to clean this up and fix some of these flaws through Optional Binding:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooBinding</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Do stuff with x</span></span><br><span class="line">        x.description</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This removes both of the flaws that the first function had, but adds a new one. Here you’re putting your desired code within all the conditions, rather than afterward. You might not immediately see a problem with this, but you could imagine how confusing it could become if it was nested with numerous conditions that all needed to be met before running your statements.</p>
-<p>The way to clean this up is to do each of your checks first, and exit if any aren’t met. This allows easy understanding of what conditions will make this function exit.</p>
-<p>I’ve heard this called the Bouncer Pattern, which makes a lot of sense. You want to get rid of the bad cases before they get in the door. It also allows you to think about one case at a time, rather than figuring out how all combinations need to work together.</p>
-<p>Here enters the <code>guard</code> statement:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooGuard</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Using <code>guard</code> solves all 3 of the issues mentioned above:</p>
-<ol>
-<li>Checking for the condition you do want, not the one you don’t. This again is similar to an <code>assert</code>. If the condition is not met, <code>guard‘s else</code> statement is run, which breaks out of the function.</li>
-<li>If the condition passes, the optional variable here is automatically unwrapped for you within the scope that the <code>guard</code> statement was called – in this case, the <code>fooGuard(_:)</code> function. This is an important, yet notably strange feature that really makes the <code>guard</code> statement useful.</li>
-<li>You are checking for bad cases early, making your function more readable and easier to maintain.<br></li>
-</ol>
-<p>The cool thing is that this same pattern holds true for non-optional values as well:</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalGood</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalBad</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>I hope this simple example shows how you could start using <code>guard</code> immediately in your Swift code to make your function/methods more clear. It’s easy for us to immediately judge the value of a new feature until you give it a chance and see what it can or can’t do for you.</p>
-<p>Going from Objective-C to Swift is a huge change, not only to syntax, but how you have to look at architecting your code. You can only benefit from this awesome new language if you actively change your mindset while writing code by expanding your everyday patterns and style.</p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-        <category>Basic usage</category>
-      </categories>
-      <tags>
-        <tag>Swift</tag>
-        <tag>keyword</tag>
-        <tag>reprint</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SwiftUI Property Wrappers</title>
     <url>/zh-cn/Swift/swiftui-property-wrappers.html</url>
     <content><![CDATA[<h3 id="posted-by-Majid"><a href="#posted-by-Majid" class="headerlink" title="posted by Majid"></a>posted by Majid</h3><p>这篇文章转载自：<a href="https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/">https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/</a><br>中文翻译可以看这篇文章：<a href="https://www.cnblogs.com/xiaoniuzai/p/11417123.html">https://www.cnblogs.com/xiaoniuzai/p/11417123.html</a></p>
@@ -437,69 +497,9 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
         <category>Swift</category>
       </categories>
       <tags>
+        <tag>SwiftUI</tag>
         <tag>reprint</tag>
-        <tag>SwiftUI</tag>
         <tag>Property Wrappers</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xcode 中设置APP的图标（Icon）和启动页面（Launch Screen）</title>
-    <url>/zh-cn/Swift/swiftui-project-icon-and-launch-pic.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-<p>图标 <code>Icon</code> 和启动页面 <code>Launch Screen</code> 无疑是一个 App 最重要的东西之一，它能给用户以第一印象，是否能 catch one’s eyes 就看图标和启动页面的表现了（况且，连图标和启动页面都没有的话也太水了吧 😂 ）。<br><br></p>
-<p>幸好在 Xcode 中设置 <code>Icon</code> 和 <code>Launch Screen</code> 比较简单，不用花多少功夫，现在就让我们 diving in吧。</p>
-<h2 id="设置图标（Icon）"><a href="#设置图标（Icon）" class="headerlink" title="设置图标（Icon）"></a>设置图标（Icon）</h2><p>首先，要准备4组图标（如果是发布在 <code>iOS</code> 平台上），这4组分别是 <code>120 x 120 px</code>，<code>152 x 152 px</code>，<code>167 x 167 px</code>，<code>1024 x 1024 px</code> 的尺寸，要 <code>PNG</code> 格式。<br><br>然后，将这4张图片 <code>Add Files to &lt;Your Project&gt;</code>。<br><br>接下来，打开 <code>Assets.xcassets</code>，将项目结构中的图片拉入 <code>AppIcon</code> 中的相应位置，就像这样<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/appicon.png" alt="将4个图标放入xcassets"></p>
-<br>
-
-<p>最后，在你的 xcodeproj 中将 <code>App Icons Source</code> 设为 <code>AppIcon</code>，接下来重新 <code>Build</code> 即可。</p>
-<h2 id="设置启动页面（Launch-Screen）"><a href="#设置启动页面（Launch-Screen）" class="headerlink" title="设置启动页面（Launch Screen）"></a>设置启动页面（Launch Screen）</h2><p>在我当前的 Xcode 版本（13.0）中，要设置启动页面需要有 <code>Launch Screen File</code>，事实上，这个文件可以使用 <code>.storyboard</code>。<br><br>我们在项目中创建 <code>.storyboard</code>文件，我将其命名为 “Launch Screen.storyboard”。<br><br>打开我们的 storyboard，然后在里面设计即可。<br><br>最后，在我们的 xcodeproj 中将 <code>Launch Screen File</code> 设置为 “Launch Screen.storyboard”。<br><br>这样就完成了。<br><br></p>
-<h2 id="附：在-storyboard-中全屏图片"><a href="#附：在-storyboard-中全屏图片" class="headerlink" title="附：在 storyboard 中全屏图片"></a>附：在 storyboard 中全屏图片</h2><p><em>因为我的启动界面是用图片做成的静态界面，所以我介绍一下storyboard 中全屏图片（保留 <code>Safe Area</code> ）的方法</em></p>
-<p>首先，在 <code>Assets.xcassets</code> 中引入图片，<code>直接拖入</code>或<code>点击左下角的+</code>都可。<br><br>然后，在 storyboard 中，点击右上角的加号，添加一个 <code>Image View</code>，并在 <code>Image View</code>的属性面板中设置 <code>Image</code> 为刚添加的 asset。<br><br>接下来，选中新添加的 <code>Image View</code> ，点击底部栏中的 <code>Add New Constraints（意为约束）</code>，并将上下左右四个为虚线的 <code>constraints</code> 点亮、设置为0，设置完成后点击面板下面的 <code>Add Constraints</code>。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/launch_screen.png" alt="Add New Constraints"><br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/constraints.png" alt="set all Constraints"></p>
-<br>
-
-<p>最后，就是设置图片居中了，注意选中 <code>Image View</code> ，点击 <code>Add New Constraints</code> 左边的 <code>Align</code>，选中 <code>Horizontally in Container</code> 和 <code>Vertically in Container</code>，设置完成后点击面板下面的 <code>Add Constraints</code>，设置完成 🥳 。<br><br><br><img src="/zh-cn/Swift/swiftui-project-icon-and-launch-pic/align.png" alt="the final results"></p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-      </categories>
-      <tags>
-        <tag>SwiftUI</tag>
-        <tag>Xcode</tag>
-        <tag>iOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>“拾句” 来了😉</title>
-    <url>/zh-cn/App/ZhuJian/the-launch-of-ZhuJian.html</url>
-    <content><![CDATA[<h3 id="posted-by-LeoZhao"><a href="#posted-by-LeoZhao" class="headerlink" title="posted by LeoZhao"></a>posted by LeoZhao</h3><br>
-
-<p>我发现我已经好久没有发过博客了😂，上一次发还是在之前发的  </p>
-<p>差不多半年前写的 <a href="https://github.com/Tomortec/HexoPostEditor">HexoPostEditor</a> （拿来写博客的）甚至都没用过🥲，正好，这次趁着“拾句”正式发布赶紧用一用，不然要被嘎子偷走了  </p>
-<p>好吧好吧，这篇其实主要是随便谈谈“拾句”开发时的一些经过的，就当是记录一下啦  </p>
-<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-0.jpeg" alt="开篇"></p>
-<p><strong>为什么要做“拾句”？</strong>  </p>
-<p>就像我在很多地方说的那样，就是有一天我“难得”看一看书，想到要写一些东西下来，但是因为是在床上，而且舍友们都已经睡了，我不太好拿笔记。 <del>万一被发现偷偷卷了怎么办（bushi）😆</del> 其实我没有小桌子确实不好记，而且又（濑）啊。正好那段时间 Eutropension 已经大致完成了，比较闲，所以想着要不自己做一个算了，反正也不算很难。  </p>
-<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-1.jpg" alt="灵感"></p>
-<p>最后一边划水 <del>（传统艺能）</del> 一边做，一个星期不到就大概全部做完了，自己想要的功能都有了，包括记录、扫描、大纲、小组件这些。可是啊，人总是一个得寸进尺的生物。我想着都做到这里了，要不顺手发布一下吧👍，不然888都浪费了，哼。  </p>
-<p>然后我发现卡住我的不是什么技术难题，而是 <em>设计</em> 🤣 （啊，是设计，那个我又爱又烦的东西）。我年纪轻轻就在取名字、选择图标和背景图片上花了32个小时， <del>你敢想吗</del> 。我总觉得我对这些东西有种执念，他们必须要有一些故事在里面，再不济也应该有呼应、有深意，而不是拍拍脑瓜子就闭眼上网找现成的东西。  </p>
-<p>先是取名字，其实仔细看的话会发现“拾句”的英文是 ZhuJian (竹简)，我一开始创建项目的时候想的就是这个名字，因为当时我就想着要融入一些国风元素。古人在竹简上记录嘛，而且竹简上记录的东西有限，也更加契合“记录句子”的初衷。不久之后我猛然醒悟，我走的可是简约风啊（ <del>就是懒得画，懒得弄花里胡哨的东西</del> ），文不对题了属于是，所以必须要改名。那，起啥？「句子记录器？」「呸，恶心🤢，听起来就像流氓软件一样，太没有B格了吧」「淘句（我写这篇时乱起的，我怎么可能那么没品位，bushi）？」「🤮」「我去汉典找找吧」「🧻👄，行」OKOK，结果，我上汉典找到的都B过头了🤣，不接地气，听起来就很拗口。“星辰俯手拾”。哦？“拾”这字就OK啊，难不成就叫“拾句”，拾取世间最美的句子，拾取长河漫漫星辰。hng hňg，这不就来了么。  </p>
-<p>接下来就是图标了。那肯定不能就“拾句”两个字 pia 在上面啊，又不是 Eutropension（勿cue）。「句」不正好可以用「。」表示吗，这样就很容易做出单字的主体突出的设计了。  于是，我做出了下面三种 Icon（有一说一，MasterGo 真的好用还良心），但是，选择困难症犯了啊，该选哪一种呢。</p>
-<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-icons-script.jpeg" alt="图标设计稿"></p>
-<p>而至于背景图片，我通常的做法是上 Pexels 或者 Pixabay 找一些好看的图片放上去，就比如 MyWebnets，可是，这样做似乎不太好，毕竟我走的是简约风啊，在后面放一个花里胡哨的背景不就像是一张手纸扔进了水沟里面吗，不行不行。「嗯，要不用纯色背景？」「诶，好像还可以，但是特色呢？」我突然想到可以用传统的中国画作啊，前段时间听关大洲老师的作品觉得自己的血脉得到了共鸣。作为炎黄子孙，我有义务将中华传统文化融入现代生活中，向世人展示中国文化的魅力！👍我在古代文人画中挑选，选出了《江山秋色图》《清明上河图》《渔村小雪图》《写生蛱蝶图》，分别对应记录句子时淡雅、入世、恬静、活泼的心境。我希望用户能为这些背景所吸引，更加深入地了解其背后的故事，了解博大精深的中华文化。（为了这些作品能够更好地符合 App 的风格，我还对其进行了一些加工，若有不当，请指正，必将感激不尽）  </p>
-<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-2.jpg" alt="剪影">  </p>
-<p>至此，“拾句”的初代版本已经完成，前前后后经过了一个星期不到。我兴致勃勃地跑去提交， <strong>啪</strong> ，审核团队反手给了我一个 <del>大逼斗</del> ，噢，原来是我忘在 5.5 上测试了 😇，最下面的那个记录栏已经超出了边界。但是一开始退回的时候我不到啊，哒哒哒嘀哒哒，他就给我扔个网址，我还以为是啥王者修炼秘籍，结果一看新手训练营🤪。我还以为是当前卡片位移强调有点反人类了，就马上找他们交 (dui) 谈 (xian) 。🐒，好家伙，他们发过来了一个截图，直接给我整无语了——小丑🤡竟是我自己～。Nice，改完就成功上架了。  </p>
-<p>故事，应该就要结束了。<br>如果我没有做 ASO 或者广告的话，“拾句”就只有我一个人用，我想要的功能已经完备，在我的设备上也十分流畅，我不需要再做任何更新了。  </p>
-<p><img src="/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-3.jpg" alt="杂谈"></p>
-<p>可是，这是我么。这不是 LeoZhao  </p>
-]]></content>
-      <categories>
-        <category>App</category>
-        <category>ZhuJian</category>
-      </categories>
-      <tags>
-        <tag>App</tag>
-        <tag>Impression</tag>
       </tags>
   </entry>
 </search>
