@@ -59,9 +59,7 @@
       
       
       
-      <!-- 引用 artitalk -->
-<script type="text/javascript" src="https://unpkg.com/artitalk"></script>
-<style>
+      <style>
     #artitalk_main {
         margin-top: 5vh;
     }
@@ -188,21 +186,23 @@
         opacity: 0.0;
     }
     #pubComment, #pubShuo {
-        background-image: url("https://leolovedairy.life/images/icon_write.svg");
+        background-image: url(prefix + "icon_write.svg");
     }
     #switchUser {
-        background-image: url("https://leolovedairy.life/images/icon_smile.svg");
+        background-image: url(prefix + "icon_smile.svg");
     }
     #uploadSource {
-        background-image: url("https://leolovedairy.life/images/icon_upload.svg");
+        background-image: url(prefix + "icon_upload.svg");
     }
     #operare_artitalk .c2 {
         opacity: 1.0;
     }
 </style>
 <!-- 存放说说的容器 -->
+<script src="../js/artitalk.min.js"></script>
 <div id="artitalk_main"></div>
 <script>
+let prefix = "https://leolovedairy.life/images/";
 new Artitalk({
     // serverURL: "https://ltalk.leozhao.workers.dev",
     // appId: 'LeoLeoLeoLeo', // Your LeanCloud appId
@@ -213,14 +213,16 @@ new Artitalk({
     pageSize: 7,
     shuoPla: "😉 Hello～ 😉",
     atEmoji: {
-        "爱你": "https://leolovedairy.life/images/aini.png",
-        "看我看我": "https://leolovedairy.life/images/kanwo.png",
-        "叮": "https://leolovedairy.life/images/maimeng.png",
-        "赞": "https://leolovedairy.life/images/zan.png",
-        "好耶": "https://leolovedairy.life/images/haoye.png",
-        "抱抱你": "https://leolovedairy.life/images/baobao.png",
-        "Hi": "https://leolovedairy.life/images/hi.png",
-        "荷包蛋": "https://leolovedairy.life/images/kule.png",
+        "爱你": prefix + "aini.png",
+        "看我看我": prefix + "kanwo.png",
+        "叮": prefix + "maimeng.png",
+        "赞": prefix + "zan.png",
+        "好耶": prefix + "haoye.png",
+        "抱抱你": prefix + "baobao.png",
+        "Hi": prefix + "hi.png",
+        "你好呀": prefix + "nihao.png",
+        "荷包蛋": prefix + "kule.png",
+        "溜了": prefix + "liu.png"
     }
 });
 </script>
