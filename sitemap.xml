@@ -214,13 +214,6 @@
   </url>
   
   <url>
-    <loc>https://leolovedairy.life/tags/Property-Wrappers/</loc>
-    <lastmod>2022-08-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://leolovedairy.life/tags/App/</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>daily</changefreq>
@@ -229,6 +222,13 @@
   
   <url>
     <loc>https://leolovedairy.life/tags/Impression/</loc>
+    <lastmod>2022-08-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://leolovedairy.life/tags/Property-Wrappers/</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -265,6 +265,20 @@
   </url>
   
   <url>
+    <loc>https://leolovedairy.life/categories/Insights/0/</loc>
+    <lastmod>2022-08-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://leolovedairy.life/categories/Insights/1/</loc>
+    <lastmod>2022-08-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://leolovedairy.life/categories/Economy/</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>daily</changefreq>
@@ -279,27 +293,6 @@
   </url>
   
   <url>
-    <loc>https://leolovedairy.life/categories/Insights/0/</loc>
-    <lastmod>2022-08-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://leolovedairy.life/categories/App/</loc>
-    <lastmod>2022-08-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://leolovedairy.life/categories/Insights/1/</loc>
-    <lastmod>2022-08-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://leolovedairy.life/categories/Insights/2/</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>daily</changefreq>
@@ -308,6 +301,13 @@
   
   <url>
     <loc>https://leolovedairy.life/categories/Economy/Political-Economy/</loc>
+    <lastmod>2022-08-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://leolovedairy.life/categories/App/</loc>
     <lastmod>2022-08-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
