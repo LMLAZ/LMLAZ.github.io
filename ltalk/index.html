@@ -245,11 +245,70 @@ new Artitalk({
                     .replace(/\'/g, '&#x27')
                     .replace(/\//g, '&#x2F');
             };
-            const deliverName = "LeoZhao's Bot🤖";
-            const subject = `[💌 LeoLoveDairy] ${reply.replyReceiver.name} 刚刚回复了你 😉`;
-            const htmlTemplate = `
-            <!DOCTYPE html><html lang="zh-CN"><head> <meta charset="UTF-8"> <title>[💌 LeoLoveDairy] 有人刚刚回复了你 😉</title></head><body> <style> * { text-align: center; } a, a:visited { color: cornflowerblue; text-decoration: none; } a:hover { color: coral; } section { color: white; } section a, section a:hover, section a:visited { color: white; } body { color: #3d3d3d; } img { max-width: 100%; } </style> <img src="https://s1.ax1x.com/2022/08/28/vW6BDg.jpg" /> <h1>收到回复了！</h1> <h2>Hi, ${escapeOutput(user)}<img style="display:inline;width:2rem;vertical-align: bottom;" src="https://leolovedairy.life/images/nihao.png"></h2> <h2>${escapeOutput(reply.replyReceiver.name)} 刚刚在 <a href="https://leolovedairy.life/ltalk" target="_blank">LTalk</a> 回复了你 😃</h2><br> <h3>「 我是 LeoZhao 的 Bot，Carmor 🤖 」</h3> <h3>「 虽然这是 noreply 的，但是你对我说的都会转达给 Leo 」</h3> <h3>「 下面是 Leo 给我的任务，要发一些广告 😝 」</h3> <br> <section style="background-color: cornflowerblue;"> <br> <div> <img style="display: inline-block;width: 40%;border-radius: 12px;margin-right: 2rem;" src="https://leolovedairy.life/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-3.jpg"> <p style="display: inline-block;vertical-align: top;text-align: left;font-size: 1.2rem;"><a style=" font-size: 2rem; font-weight: 500;" href="https://tomortec.com/projects/ZhuJian" target="_blank">拾句</a><br> <span> <span> <strong>1.3.0</strong>「九」在眼前</span><br><br> <span>> Universal Link</span><br> <span>> 网页分享</span><br> <span>> 左手适应</span><br> <span>> 批量句子导入导出</span><br> <span>> 帮助</span><br> </span> </p> </div> <br> </section> <section style="background-color: coral;"> <br> <h3><a href="https://leolovedairy.life" target="_blank">https://leolovedairy.life</a></h3> <p>Copyright © 2022 Tomortec.LeoZhao.</p> <br> </section></body></html>
-            `;
+            const subject = `[💌 LeoLoveDairy] ${escapeOutput(user)} 刚刚回复了你 😉`;
+            const params = {
+                "personalizations": [
+                    {
+                        "to": [
+                            {
+                                "email": reply.replyReceiver.email,
+                                "name": reply.replyReceiver.name
+                            }
+                        ],
+                        "dynamic_template_data": {
+                            // I made a mistake here
+                            "user": escapeOutput(reply.replyReceiver.name),
+                            "replyName": escapeOutput(user)
+                        }
+                    }
+                ],
+                "from": {
+                    "email": "noreply@leolovedairy.life",
+                    "name": "LeoZhao's Bot🤖"
+                },
+                "reply_to": {
+                    "email": "leozhao@tomortec.com",
+                    "name": "LeoZhao"
+                },
+                "subject": subject,
+                "mail_settings": {
+                    "footer": {
+                        "enable": false
+                    }
+                },
+                "content": [
+                    {
+                        "type": "text/html",
+                        "value": ""
+                    }
+                ],
+                "template_id": "d-ad26679c21cc4990b8e1c90800258bf6",
+                "asm": {
+                    "group_id": 10001
+                }
+            };
+            console.log(params);
+            $.ajax({
+                url: "https://api.sendgrid.com/v3/mail/send",
+                type: "POST",
+                contentType: "application/json",
+                headers: {
+                    "Authorization": "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",
+                },
+                data: params,
+                dataType: "json",
+                success: function() {
+                    console.log("Send email successfully");
+                },
+                error: function(xhr, exception, thrownError) {
+                    console.log(`Failed to send email for ${xhr}`);
+                    console.log(exception);
+                    console.log(thrownError);
+                }
+            });
+            // const htmlTemplate = `
+            // <!DOCTYPE html><html lang="zh-CN"><head> <meta charset="UTF-8"> <title>[💌 LeoLoveDairy] 有人刚刚回复了你 😉</title></head><body> <style> * { text-align: center; } a, a:visited { color: cornflowerblue; text-decoration: none; } a:hover { color: coral; } section { color: white; } section a, section a:hover, section a:visited { color: white; } body { color: #3d3d3d; } img { max-width: 100%; } </style> <img src="https://s1.ax1x.com/2022/08/28/vW6BDg.jpg" /> <h1>收到回复了！</h1> <h2>Hi, ${escapeOutput(user)}<img style="display:inline;width:2rem;vertical-align: bottom;" src="https://leolovedairy.life/images/nihao.png"></h2> <h2>${escapeOutput(reply.replyReceiver.name)} 刚刚在 <a href="https://leolovedairy.life/ltalk" target="_blank">LTalk</a> 回复了你 😃</h2><br> <h3>「 我是 LeoZhao 的 Bot，Carmor 🤖 」</h3> <h3>「 虽然这是 noreply 的，但是你对我说的都会转达给 Leo 」</h3> <h3>「 下面是 Leo 给我的任务，要发一些广告 😝 」</h3> <br> <section style="background-color: cornflowerblue;"> <br> <div> <img style="display: inline-block;width: 40%;border-radius: 12px;margin-right: 2rem;" src="https://leolovedairy.life/zh-cn/App/ZhuJian/the-launch-of-ZhuJian/zhujian-3.jpg"> <p style="display: inline-block;vertical-align: top;text-align: left;font-size: 1.2rem;"><a style=" font-size: 2rem; font-weight: 500;" href="https://tomortec.com/projects/ZhuJian" target="_blank">拾句</a><br> <span> <span> <strong>1.3.0</strong>「九」在眼前</span><br><br> <span>> Universal Link</span><br> <span>> 网页分享</span><br> <span>> 左手适应</span><br> <span>> 批量句子导入导出</span><br> <span>> 帮助</span><br> </span> </p> </div> <br> </section> <section style="background-color: coral;"> <br> <h3><a href="https://leolovedairy.life" target="_blank">https://leolovedairy.life</a></h3> <p>Copyright © 2022 Tomortec.LeoZhao.</p> <br> </section></body></html>
+            // `;
             // let emailURL = new URL("https://dm.aliyuncs.com/");
             // emailURL.searchParams.append("Action", "SingleSendMail");
             // emailURL.searchParams.append("AccountName", "noreply@leolovedairy.life");
@@ -259,22 +318,58 @@ new Artitalk({
             // emailURL.searchParams.append("Subject", subject);
             // emailURL.searchParams.append("ToAddress", reply.replyReceiver.email);
             // emailURL.searchParams.append("HtmlBody", htmlTemplate);
-            let emailURL = `
-            https://dm.aliyuncs.com/?Action=SingleSendMail&AccountName=noreply@leolovedairy.life&AddressType=1&ReplyToAddress=true&Subject=${subject}&ToAddress=${reply.replyReceiver.email}&FromAlias=${deliverName}&HtmlBody=${htmlTemplate}
-            `;
-            console.log(encodeURI(emailURL));
-            $.ajax({
-                url: encodeURI(emailURL),
-                type: 'GET',
-                dataType: 'json',
-                success: function() {
-                    console.log("Send email successfully");
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    console.log(`Failed to send email for ${xhr}`);
-                    console.log(thrownError);
-                }
-            });
+            // let emailURL = `
+            // https://dm.aliyuncs.com/?Action=SingleSendMail&AccountName=noreply@leolovedairy.life&AddressType=1&ReplyToAddress=true&Subject=${subject}&ToAddress=${reply.replyReceiver.email}&FromAlias=${deliverName}&HtmlBody=${htmlTemplate}
+            // `;
+            // console.log(encodeURI(emailURL));
+            // $.ajax({
+            //     url: encodeURI(emailURL),
+            //     type: 'GET',
+            //     dataType: 'json',
+                // success: function() {
+                //     console.log("Send email successfully");
+                // },
+                // error: function(xhr, ajaxOptions, thrownError) {
+                //     console.log(`Failed to send email for ${xhr}`);
+                //     console.log(thrownError);
+                // }
+            // });
+            // "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"
+            // const params = {
+            //     "FromEmailAddress": "LeoZhao's Bot🤖 <noreply@mail.leolovedairy.life>",
+            //     "Destination": [reply.replyReceiver.email],
+            //     "Subject": subject,
+            //     "ReplyToAddresses": "leozhao@tomortec.com",
+            //     "Template": {
+            //         "TemplateID": 37396,
+            //         "TemplateData": {
+            //             "user": escapeOutput(user),
+            //             "replyName": escapeOutput(reply.replyReceiver.name)
+            //         }
+            //     }
+            // };
+            // console.log(params);
+            // $.ajax({
+            //     url: "https://ses.tencentcloudapi.com",
+            //     type: "POST",
+            //     contentType: "application/json; charset=utf-8",
+            //     headers: {
+            //         "Host": "cvm.tencentcloudapi.com",
+            //         "X-TC-Action": "SendEmail",
+            //         "X-TC-Version": "2020-10-02",
+            //         "X-TC-Timestamp": Date.now(),
+            //         "X-TC-Region": "ap-hongkong"
+            //     },
+            //     data: params,
+            //     dataType: "json",
+            //     success: function() {
+            //         console.log("Send email successfully");
+            //     },
+            //     error: function(xhr, ajaxOptions, thrownError) {
+            //         console.log(`Failed to send email for ${xhr.responseText}`);
+            //         console.log(thrownError);
+            //     }
+            // })
         }
     }
 });
