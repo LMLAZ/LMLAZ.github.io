@@ -262,16 +262,16 @@ new Artitalk({
             let emailURL = `
             https://dm.aliyuncs.com/?Action=SingleSendMail&AccountName=noreply@leolovedairy.life&AddressType=1&ReplyToAddress=true&Subject=${subject}&ToAddress=${reply.replyReceiver.email}&FromAlias=${deliverName}&HtmlBody=${htmlTemplate}
             `;
-            console.log(emailURL);
+            console.log(encodeURI(emailURL));
             $.ajax({
-                url: emailURL,
+                url: encodeURI(emailURL),
                 type: 'GET',
                 dataType: 'json',
                 success: function() {
                     console.log("Send email successfully");
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
-                    console.log(`Failed to send email for ${xhr.responseText}`);
+                    console.log(`Failed to send email for ${xhr}`);
                     console.log(thrownError);
                 }
             });
