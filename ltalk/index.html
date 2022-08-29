@@ -241,9 +241,9 @@ new Artitalk({
                 url: "https://lmail.azurewebsites.net/api/MailSender?code=“llllllll！！”",
                 type: "POST",
                 data: `{
-                    "email": ${reply.replyReceiver.email},
-                    "name": ${reply.replyReceiver.name},
-                    "commentator": ${user}
+                    "email": "${reply.replyReceiver.email}",
+                    "name": "${reply.replyReceiver.name}",
+                    "commentator": "${user}"
                 }`,
                 success: function() {
                     console.log("Send email successfully");
