@@ -212,6 +212,25 @@
 <div id="artitalk_main"></div>
 <script>
 let prefix = "https://leolovedairy.life/images/";
+function sendMail(name, email, commentator) {
+    $.ajax({
+        url: "https://lmail.azurewebsites.net/api/MailSender?code=“llllllll！！”",
+        type: "POST",
+        data: `{
+            "email": "${email}",
+            "name": "${name}",
+            "commentator": "${commentator}"
+        }`,
+        success: function() {
+            console.log("Send email successfully");
+        },
+        error: function(xhr, exception, thrownError) {
+            console.log(xhr);
+            console.log(exception);
+            console.log(thrownError);
+        }
+    });
+}
 new Artitalk({
     // serverURL: "https://ltalk.leozhao.workers.dev",
     // appId: 'LeoLeoLeoLeo', // Your LeanCloud appId
@@ -236,24 +255,9 @@ new Artitalk({
     },
     onCommentsPublished: function(user, content, email, reply) {
         console.log(reply);
+        sendMail("LeoZhao", "leozhao@tomortec.com", user);
         if (reply.hasReply && reply.replyReceiver && reply.replyReceiver.email) {
-            $.ajax({
-                url: "https://lmail.azurewebsites.net/api/MailSender?code=“llllllll！！”",
-                type: "POST",
-                data: `{
-                    "email": "${reply.replyReceiver.email}",
-                    "name": "${reply.replyReceiver.name}",
-                    "commentator": "${user}"
-                }`,
-                success: function() {
-                    console.log("Send email successfully");
-                },
-                error: function(xhr, exception, thrownError) {
-                    console.log(xhr);
-                    console.log(exception);
-                    console.log(thrownError);
-                }
-            });
+            sendMail(reply.replyReceiver.name, reply.replyReceiver.email, user);
         }
     }
 });
