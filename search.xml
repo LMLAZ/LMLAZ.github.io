@@ -502,4 +502,18 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
         <tag>Property Wrappers</tag>
       </tags>
   </entry>
+  <entry>
+    <title>提示词工程</title>
+    <url>/zh-cn/AI/prompt-engineering.html</url>
+    <content><![CDATA[<h1 id="提示词工程"><a href="#提示词工程" class="headerlink" title="提示词工程"></a>提示词工程</h1><p><strong>提示词工程</strong>是AI领域的一个概念，尤其常用于 <em>NLP领域</em>。</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>NLP</tag>
+        <tag>Prompt Engineering</tag>
+      </tags>
+  </entry>
 </search>

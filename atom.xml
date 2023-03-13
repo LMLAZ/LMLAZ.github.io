@@ -6,7 +6,7 @@
   <link href="https://leolovedairy.life/atom.xml" rel="self"/>
   
   <link href="https://leolovedairy.life/"/>
-  <updated>2022-06-29T14:12:20.925Z</updated>
+  <updated>2022-10-22T07:11:34.318Z</updated>
   <id>https://leolovedairy.life/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提示词工程</title>
+    <link href="https://leolovedairy.life/zh-cn/AI/prompt-engineering.html"/>
+    <id>https://leolovedairy.life/zh-cn/AI/prompt-engineering.html</id>
+    <published>2022-10-22T07:04:52.000Z</published>
+    <updated>2022-10-22T07:11:34.318Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;提示词工程&quot;&gt;&lt;a href=&quot;#提示词工程&quot; class=&quot;headerlink&quot; title=&quot;提示词工程&quot;&gt;&lt;/a&gt;提示词工程&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;提示词工程&lt;/strong&gt;是AI领域的一个概念，尤其常用于</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://leolovedairy.life/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://leolovedairy.life/tags/AI/"/>
+    
+    <category term="NLP" scheme="https://leolovedairy.life/tags/NLP/"/>
+    
+    <category term="Prompt Engineering" scheme="https://leolovedairy.life/tags/Prompt-Engineering/"/>
+    
+  </entry>
   
   <entry>
     <title>“拾句” 来了😉</title>

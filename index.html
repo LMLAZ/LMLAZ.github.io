@@ -66,6 +66,65 @@
     <h1 class="page-type-title"></h1>
     
     
+    <article id="post-prompt-engineering" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/zh-cn/AI/prompt-engineering.html">提示词工程</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/zh-cn/AI/prompt-engineering.html" class="article-date">
+  <time datetime="2022-10-22T07:04:52.000Z" itemprop="datePublished">2022-10-22</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/AI/">AI</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+      <h1 id="提示词工程"><a href="#提示词工程" class="headerlink" title="提示词工程"></a>提示词工程</h1><p><strong>提示词工程</strong>是AI领域的一个概念，尤其常用于 <em>NLP领域</em>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://leolovedairy.life/zh-cn/AI/prompt-engineering.html" data-id="clf6sj9ze0000iofy5a8j8um8" class="article-share-link">
+        Share
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NLP/" rel="tag">NLP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Prompt-Engineering/" rel="tag">Prompt Engineering</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+    
     <article id="post-the-launch-of-ZhuJian" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -904,101 +963,6 @@
 
 </article>
     
-    <article id="post-swift-guard" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-      
-
-<h2 itemprop="name">
-  <a class="article-title" href="/zh-cn/Swift/Basic-usage/swift-guard.html">Swift Guard Statement（Swift中的 guard 语句）</a>
-</h2>
-
-
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/zh-cn/Swift/Basic-usage/swift-guard.html" class="article-date">
-  <time datetime="2021-10-29T01:05:23.000Z" itemprop="datePublished">2021-10-29</time>
-</a>
-      
-<div class="article-category">
-  <a class="article-category-link" href="/categories/Swift/">Swift</a> / <a class="article-category-link" href="/categories/Swift/Basic-usage/">Basic usage</a>
-</div>
-
-    </div>
-    
-
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        
-      
-      
-      <h3 id="posted-by-ecerney"><a href="#posted-by-ecerney" class="headerlink" title="posted by ecerney"></a>posted by ecerney</h3><p>这篇文章转自：<a target="_blank" rel="noopener" href="https://ericcerney.com/swift-guard-statement/">https://ericcerney.com/swift-guard-statement/</a></p>
-<br>
-
-<p>When I first saw the Swift <code>guard</code> statement during Apple’s Platform State of the Union, I couldn’t quite understand why I would ever use it. So what is it? The tl;dr is as follows:<br><br></p>
-<p><code>Like an if statement, guard executes statements based on a Boolean value of an expression. Unlike an if statement, guard statements only run if the conditions are not met. You can think of guard more like an Assert, but rather than crashing, you can gracefully exit.</code><br><br></p>
-<p>Even after seeing some examples, I only saw it as a confusing way to accomplish what we already could with Optional Binding or with <code>if-else</code> statements alone.</p>
-<br>
-It wasn’t until I started discussing it over this Twitter conversation that I realized there are actually some interesting benefits of using such syntax.
-<br>
-<br>
-
-<h2 id="Diving-In"><a href="#Diving-In" class="headerlink" title="Diving In"></a>Diving In</h2><p>Let’s take a simple example comparing current techniques vs using the new guard statement:</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooManualCheck</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">==</span> <span class="literal">nil</span> <span class="operator">||</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x<span class="operator">!</span>.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This is the most basic Objective-C style way to make sure a value exists and that it meets a condition. Now this works fine, but has a couple flaws:</p>
-<ol>
-<li>You’re checking for a condition that you don’t want, rather than checking for the value you do want. Code becomes confusing when you have a bunch of checks like this. What you’re hoping for here is that your condition actually doesn’t pass.</li>
-<li>You also need to force unwrap the optional value after the condition fails.<br></li>
-</ol>
-<p>Swift gave us a way to clean this up and fix some of these flaws through Optional Binding:</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooBinding</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Do stuff with x</span></span><br><span class="line">        x.description</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>This removes both of the flaws that the first function had, but adds a new one. Here you’re putting your desired code within all the conditions, rather than afterward. You might not immediately see a problem with this, but you could imagine how confusing it could become if it was nested with numerous conditions that all needed to be met before running your statements.</p>
-<p>The way to clean this up is to do each of your checks first, and exit if any aren’t met. This allows easy understanding of what conditions will make this function exit.</p>
-<p>I’ve heard this called the Bouncer Pattern, which makes a lot of sense. You want to get rid of the bad cases before they get in the door. It also allows you to think about one case at a time, rather than figuring out how all combinations need to work together.</p>
-<p>Here enters the <code>guard</code> statement:</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooGuard</span>(<span class="params">x</span>: <span class="type">Int</span>?)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> x <span class="operator">=</span> x <span class="keyword">where</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">    x.description</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Using <code>guard</code> solves all 3 of the issues mentioned above:</p>
-<ol>
-<li>Checking for the condition you do want, not the one you don’t. This again is similar to an <code>assert</code>. If the condition is not met, <code>guard‘s else</code> statement is run, which breaks out of the function.</li>
-<li>If the condition passes, the optional variable here is automatically unwrapped for you within the scope that the <code>guard</code> statement was called – in this case, the <code>fooGuard(_:)</code> function. This is an important, yet notably strange feature that really makes the <code>guard</code> statement useful.</li>
-<li>You are checking for bad cases early, making your function more readable and easier to maintain.<br></li>
-</ol>
-<p>The cool thing is that this same pattern holds true for non-optional values as well:</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalGood</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">guard</span> x <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fooNonOptionalBad</span>(<span class="params">x</span>: <span class="type">Int</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> x <span class="operator">&lt;=</span> <span class="number">0</span> &#123;</span><br><span class="line">        <span class="comment">// Value requirements not met, do something</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Do stuff with x</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<br>
-
-<h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>I hope this simple example shows how you could start using <code>guard</code> immediately in your Swift code to make your function/methods more clear. It’s easy for us to immediately judge the value of a new feature until you give it a chance and see what it can or can’t do for you.</p>
-<p>Going from Objective-C to Swift is a huge change, not only to syntax, but how you have to look at architecting your code. You can only benefit from this awesome new language if you actively change your mindset while writing code by expanding your everyday patterns and style.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://leolovedairy.life/zh-cn/Swift/Basic-usage/swift-guard.html" data-id="cl7d0353d0013adg3ed3kgd9i" class="article-share-link">
-        Share
-      </a>
-      
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/keyword/" rel="tag">keyword</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reprint/" rel="tag">reprint</a></li></ul>
-
-    </footer>
-
-  </div>
-
-  
-
-  
-
-</article>
-    
   </article>
   
 
@@ -1021,7 +985,7 @@ It wasn’t until I started discussing it over this Twitter conversation that I 
 </ul>
     </div>
     <ul class="list-inline">
-      <li>&copy; 2022 Tomortec.LeoZhao 版权所有</li>
+      <li>&copy; 2023 Tomortec.LeoZhao 版权所有</li>
       
         <a href="https://beian.miit.gov.cn/" target="_blank">ICP 备案号：京ICP备2021035035-1</a>
       
